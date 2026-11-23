@@ -9,6 +9,7 @@ license = "GPL-3.0"
 source = "https://github.com/surge-synthesizer/surge"
 summary = "Hybrid synthesizer with many oscillator, filter and effect types."
 formats = ["au", "clap", "standalone", "vst3"]
+plugin_ids = ["au:aufx:SFXT:VmbA", "au:aumu:SgXT:VmbA"]
 stars = 4159
 selected = "2026-11-23"
 exception = "Its last stable release (1.3.4) is from 2024-08, outside the 18-month rule; the authors publish official builds daily. Listed at the owner's request (2026-11-23)."

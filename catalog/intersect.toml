@@ -9,6 +9,7 @@ license = "GPL-3.0"
 source = "https://github.com/tucktuckg00se/INTERSECT"
 summary = "Time-stretching sample slicer with per-slice controls."
 formats = ["au", "vst3"]
+plugin_ids = ["au:aumu:Ixsr:Intx", "vst3:ABCDEF019182FAEB496E747849787372"]
 stars = 346
 selected = "2026-11-23"
 

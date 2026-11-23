@@ -9,6 +9,7 @@ license = "GPL-3.0"
 source = "https://github.com/tiagolr/ripplerx"
 summary = "Physically modelled synth for mallets, strings and percussion."
 formats = ["au", "vst3"]
+plugin_ids = ["au:aumu:Ripx:Tilr", "vst3:ABCDEF019182FAEB54696C7252697078"]
 stars = 665
 selected = "2026-11-23"
 

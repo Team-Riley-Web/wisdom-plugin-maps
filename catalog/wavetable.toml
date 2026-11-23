@@ -9,6 +9,7 @@ license = "BSD-3-Clause"
 source = "https://github.com/FigBug/Wavetable"
 summary = "Wavetable synthesizer."
 formats = ["au", "clap", "standalone", "vst3"]
+plugin_ids = ["au:aumu:Wave:Soca", "vst3:56535457617665776176657461626C65"]
 stars = 220
 selected = "2026-11-23"
 

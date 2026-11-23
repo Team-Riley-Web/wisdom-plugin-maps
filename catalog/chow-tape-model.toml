@@ -8,6 +8,7 @@ license = "GPL-3.0"
 source = "https://github.com/jatinchowdhury18/AnalogTapeModel"
 summary = "Physically modelled analog tape."
 formats = ["au", "clap", "standalone", "vst3"]
+plugin_ids = ["au:aufx:Jdox:Chow"]
 stars = 1466
 selected = "2026-11-23"
 exception = "Stable classic: release 2.11.4 is from 2023-11, outside the 18-month rule, but widely used; its macOS installer is notarized and universal (Apple silicon and Intel) and Windows has an official 64-bit installer. Owner-approved (2026-11-23)."

@@ -9,6 +9,7 @@ license = "GPL-3.0"
 source = "https://github.com/DISTRHO/Cardinal"
 summary = "Virtual modular synthesizer."
 formats = ["au", "clap", "standalone", "vst3"]
+plugin_ids = ["au:aumf:DcnF:Dstr", "au:aumu:DcnS:Dstr"]
 stars = 3277
 selected = "2026-11-23"
 

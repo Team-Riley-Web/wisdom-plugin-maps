@@ -9,6 +9,7 @@ license = "MIT"
 source = "https://github.com/baconpaul/airwin2rack"
 summary = "Every Airwindows effect in one plug-in, de-essers included (DeEss, DeBess), plus saturation, EQ, reverb and delay."
 formats = ["au", "clap", "standalone", "vst3"]
+plugin_ids = ["au:aufx:alFX:Dthr", "vst3:ABCDEF019182FAEB44746872616C4658"]
 stars = 757
 selected = "2026-11-23"
 

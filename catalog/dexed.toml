@@ -9,6 +9,7 @@ license = "GPL-3.0"
 source = "https://github.com/asb2m10/dexed"
 summary = "FM synthesizer after the DX7."
 formats = ["au", "clap", "standalone", "vst3"]
+plugin_ids = ["au:aumu:Dexd:DGSB", "vst3:ABCDEF019182FAEB4447534244657864"]
 stars = 3678
 selected = "2026-11-23"
 

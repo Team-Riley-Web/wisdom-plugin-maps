@@ -8,6 +8,7 @@ license = "GPL-3.0"
 source = "https://github.com/tiagolr/reevr"
 summary = "Convolution reverb with modulation before and after."
 formats = ["au", "vst3"]
+plugin_ids = ["au:aumf:reev:Tilr", "vst3:ABCDEF019182FAEB54696C7272656576"]
 stars = 301
 selected = "2026-11-23"
 

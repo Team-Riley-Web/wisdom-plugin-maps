@@ -8,6 +8,7 @@ license = "GPL-3.0"
 source = "https://github.com/hollance/krunch"
 summary = "Low-pass filter and saturation."
 formats = ["au", "vst3"]
+plugin_ids = ["au:aufx:Krnc:Dvbl", "vst3:ABCDEF019182FAEB4476626C4B726E63"]
 stars = 56
 selected = "2026-11-23"
 

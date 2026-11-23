@@ -8,6 +8,7 @@ license = "GPL-3.0"
 source = "https://github.com/valeriorlandini/theinformer"
 summary = "Live audio descriptors (loudness, spectral features)."
 formats = ["au", "vst3"]
+plugin_ids = ["au:aufx:Tinf:Vorl", "vst3:ABCDEF019182FAEB566F726C54696E66"]
 stars = 54
 selected = "2026-11-23"
 

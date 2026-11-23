@@ -9,6 +9,7 @@ license = "MIT"
 source = "https://github.com/BOBONA/Just-a-Sample"
 summary = "Sampler."
 formats = ["au", "vst3"]
+plugin_ids = ["au:aumu:Bpf2:Manu", "vst3:ABCDEF019182FAEB4D616E7542706632"]
 stars = 228
 selected = "2026-11-23"
 

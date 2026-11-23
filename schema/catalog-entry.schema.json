@@ -112,6 +112,15 @@
         ]
       }
     },
+    "plugin_ids": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^(au:[\\x20-\\x7E]{4}:[\\x20-\\x7E]{4}:[\\x20-\\x7E]{4}|vst3:[0-9A-F]{32}|clap:\\S+)$"
+      },
+      "description": "Its plug-ins' host ids (AU component codes from Info.plist, VST3 class ids from moduleinfo.json), so a host can tell a song uses it. May be incomplete; hosts also match by name."
+    },
     "maps": {
       "type": "array",
       "items": {

@@ -8,6 +8,7 @@ license = "GPL-3.0"
 source = "https://github.com/cvde/RoomReverb"
 summary = "Algorithmic room reverb, mono or stereo in, stereo out."
 formats = ["au", "clap", "vst3"]
+plugin_ids = ["au:aufx:Errp:Edsp", "vst3:ABCDEF019182FAEB4564737045727270"]
 stars = 148
 selected = "2026-11-23"
 

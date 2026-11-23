@@ -9,6 +9,7 @@ license = "MIT"
 source = "https://github.com/baconpaul/six-sines"
 summary = "Six-operator phase modulation synth."
 formats = ["au", "clap", "standalone", "vst3"]
+plugin_ids = ["au:aumu:sx7n:BcPL", "au:aumu:sxSn:BcPL"]
 stars = 317
 selected = "2026-11-23"
 

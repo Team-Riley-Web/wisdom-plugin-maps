@@ -9,6 +9,7 @@ license = "GPL-3.0"
 source = "https://github.com/midilab/jc303"
 summary = "Bass-line synth after the TB-303."
 formats = ["au", "clap", "vst3"]
+plugin_ids = ["au:aumu:J303:Mlab", "vst3:ABCDEF019182FAEB4D6C61624A333033"]
 stars = 314
 selected = "2026-11-23"
 

@@ -8,6 +8,7 @@ license = "Apache-2.0"
 source = "https://github.com/DamRsn/NeuralNote"
 summary = "Audio to MIDI transcription."
 formats = ["au", "standalone", "vst3"]
+plugin_ids = ["au:aufx:NRNT:DrAu", "vst3:ABCDEF019182FAEB447241754E524E54"]
 stars = 3531
 selected = "2026-11-23"
 

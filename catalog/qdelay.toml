@@ -8,6 +8,7 @@ license = "GPL-3.0"
 source = "https://github.com/tiagolr/qdelay"
 summary = "Dual delay."
 formats = ["au", "vst3"]
+plugin_ids = ["au:aufx:qdel:Tilr", "vst3:ABCDEF019182FAEB54696C727164656C"]
 stars = 166
 selected = "2026-11-23"
 

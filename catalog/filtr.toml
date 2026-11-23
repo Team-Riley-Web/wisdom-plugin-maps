@@ -8,6 +8,7 @@ license = "AGPL-3.0"
 source = "https://github.com/tiagolr/filtr"
 summary = "Filter moved by drawn envelopes and patterns."
 formats = ["au", "vst3"]
+plugin_ids = ["au:aumf:fltr:Tilr", "vst3:ABCDEF019182FAEB54696C72666C7472"]
 stars = 179
 selected = "2026-11-23"
 

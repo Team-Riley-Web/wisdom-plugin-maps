@@ -8,6 +8,7 @@ license = "AGPL-3.0"
 source = "https://github.com/ZL-Audio/ZLSplitter"
 summary = "Splits a signal into left/right, mid/side, low/high or transient/steady parts."
 formats = ["au", "vst3"]
+plugin_ids = ["au:aufx:Spli:Zliu", "vst3:ABCDEF019182FAEB5A6C697553706C69"]
 stars = 168
 selected = "2026-11-23"
 

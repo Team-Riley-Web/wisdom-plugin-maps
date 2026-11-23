@@ -9,6 +9,7 @@ source = "https://github.com/sdatkinson/NeuralAmpModelerPlugin"
 site = "https://www.neuralampmodeler.com/users"
 summary = "Plays Neural Amp Modeler captures of amps and pedals."
 formats = ["au", "standalone", "vst3"]
+plugin_ids = ["au:aufx:72RG:AAMa"]
 stars = 3080
 selected = "2026-11-23"
 exception = "The author publishes pre-built installers (Gateway, his build of this MIT plug-in) only on his official site, not on GitHub. Listed at the owner's request (2026-11-23)."

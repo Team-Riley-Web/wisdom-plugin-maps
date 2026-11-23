@@ -8,6 +8,7 @@ license = "AGPL-3.0"
 source = "https://github.com/ZL-Audio/ZLSpectrumEqualizer"
 summary = "Dynamic equalizer that works on the spectrum."
 formats = ["au", "vst3"]
+plugin_ids = ["au:aufx:Sequ:Zliu", "vst3:ABCDEF019182FAEB5A6C697553657175"]
 stars = 91
 selected = "2026-11-23"
 

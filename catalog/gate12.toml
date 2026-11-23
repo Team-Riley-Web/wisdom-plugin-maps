@@ -8,6 +8,7 @@ license = "GPL-3.0"
 source = "https://github.com/tiagolr/gate12"
 summary = "Trance gate and volume shaper from drawn patterns."
 formats = ["au", "vst3"]
+plugin_ids = ["au:aumf:gt12:Tilr", "vst3:ABCDEF019182FAEB54696C7267743132"]
 stars = 326
 selected = "2026-11-23"
 

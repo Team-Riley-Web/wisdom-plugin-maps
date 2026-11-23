@@ -8,6 +8,7 @@ license = "GPL-3.0"
 source = "https://github.com/trummerschlunk/master_me"
 summary = "Automatic mastering chain for streams, podcasts and radio."
 formats = ["au", "clap", "vst3"]
+plugin_ids = ["au:aufx:SndG:KlSc"]
 stars = 764
 selected = "2026-11-23"
 

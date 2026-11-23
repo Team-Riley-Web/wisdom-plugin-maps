@@ -9,6 +9,7 @@ license = "GPL-3.0"
 source = "https://github.com/attilammagyar/js80p"
 summary = "Performance-oriented polyphonic synthesizer."
 formats = ["vst3"]
+plugin_ids = ["vst3:00565354414D4A386A73383070000000"]
 stars = 147
 selected = "2026-11-23"
 

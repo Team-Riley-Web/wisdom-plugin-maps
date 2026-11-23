@@ -8,6 +8,7 @@ license = "AGPL-3.0"
 source = "https://github.com/ZL-Audio/ZLEqualizer"
 summary = "Dynamic equalizer."
 formats = ["au", "standalone", "vst3"]
+plugin_ids = ["au:aufx:Equ2:Zliu", "vst3:ABCDEF019182FAEB5A6C697545717532"]
 stars = 1080
 selected = "2026-11-23"
 

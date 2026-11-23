@@ -9,6 +9,7 @@ license = "GPL-3.0"
 source = "https://github.com/Archie3d/aeolus_plugin"
 summary = "Pipe organ synthesizer."
 formats = ["vst3"]
+plugin_ids = ["vst3:ABCDEF019182FAEB4172626545366865"]
 stars = 172
 selected = "2026-11-23"
 

@@ -8,6 +8,7 @@ license = "AGPL-3.0"
 source = "https://github.com/hqrrr/PerceptoMap"
 summary = "Perceptual spectrogram."
 formats = ["vst3"]
+plugin_ids = ["vst3:ABCDEF019182FAEB51495248504D3031"]
 stars = 83
 selected = "2026-11-23"
 

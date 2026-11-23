@@ -8,6 +8,7 @@ license = "GPL-3.0"
 source = "https://github.com/dan-k-k/vocal-gate"
 summary = "Noise gate for voice that removes coughs and clicks."
 formats = ["au", "vst3"]
+plugin_ids = ["au:aufx:Vgt1:DanK"]
 stars = 69
 selected = "2026-11-23"
 

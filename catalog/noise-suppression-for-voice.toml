@@ -8,6 +8,7 @@ license = "GPL-3.0"
 source = "https://github.com/werman/noise-suppression-for-voice"
 summary = "Real-time noise suppression for voice (RNNoise)."
 formats = ["au", "vst3"]
+plugin_ids = ["au:aufx:Rnn1:Werm", "vst3:ABCDEF019182FAEB5765726D526E6E31"]
 stars = 6996
 selected = "2026-11-23"
 

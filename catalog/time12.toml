@@ -8,6 +8,7 @@ license = "GPL-3.0"
 source = "https://github.com/tiagolr/time12"
 summary = "Delay modulated by drawn envelopes."
 formats = ["au", "vst3"]
+plugin_ids = ["au:aumf:tm12:Tilr", "vst3:ABCDEF019182FAEB54696C72746D3132"]
 stars = 312
 selected = "2026-11-23"
 
