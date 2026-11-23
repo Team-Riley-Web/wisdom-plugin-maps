@@ -1,0 +1,47 @@
+# ZL Splitter by ZL Audio: a curated free plug-in (CURATION.md). Builds are the author's own.
+format = 1
+id = "zl-splitter"
+name = "ZL Splitter"
+author = "ZL Audio"
+category = "utility"
+license = "AGPL-3.0"
+source = "https://github.com/ZL-Audio/ZLSplitter"
+summary = "Splits a signal into left/right, mid/side, low/high or transient/steady parts."
+formats = ["au", "vst3"]
+stars = 168
+selected = "2026-11-23"
+
+[[downloads]]
+platform = "macos-arm64"
+version = "0.4.0"
+url = "https://github.com/ZL-Audio/ZLSplitter/releases/download/0.4.0/ZL.Splitter-0.4.0-macOS-arm64.dmg"
+origin = "github-release"
+sha256 = "4aad01333a37087fd910ecbbce0cc31b57d83005dfa552bead7afc8e730c9e72"
+size = 5260634
+archive = "dmg"
+install = "installer"
+installer = "ZL Splitter-0.4.0-macOS-arm64.pkg"
+signed = "unsigned"
+
+[[downloads]]
+platform = "macos-x86_64"
+version = "0.4.0"
+url = "https://github.com/ZL-Audio/ZLSplitter/releases/download/0.4.0/ZL.Splitter-0.4.0-macOS-x86-64.dmg"
+origin = "github-release"
+sha256 = "68c116aff419e445d01423cd0ae4b14f713bdeecfc929d23aa2b0336f3c497c5"
+size = 5868844
+archive = "dmg"
+install = "installer"
+installer = "ZL Splitter-0.4.0-macOS-x86-64.pkg"
+signed = "unsigned"
+
+[[downloads]]
+platform = "windows-x86_64"
+version = "0.4.0"
+url = "https://github.com/ZL-Audio/ZLSplitter/releases/download/0.4.0/ZL.Splitter-0.4.0-Windows-x86-64.msi"
+origin = "github-release"
+sha256 = "3a7300b1289ea053fd9d69cd754dac16857fb848c0a790ad8de67b22eec6a071"
+size = 5685248
+archive = "msi"
+install = "installer"
+signed = "not-checked"

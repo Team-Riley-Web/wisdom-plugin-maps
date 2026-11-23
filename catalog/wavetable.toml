@@ -1,0 +1,35 @@
+# Wavetable by Roland Rabien (FigBug): a curated free plug-in (CURATION.md). Builds are the author's own.
+format = 1
+id = "wavetable"
+name = "Wavetable"
+author = "Roland Rabien (FigBug)"
+category = "instrument"
+instrument = "synth"
+license = "BSD-3-Clause"
+source = "https://github.com/FigBug/Wavetable"
+summary = "Wavetable synthesizer."
+formats = ["au", "clap", "standalone", "vst3"]
+stars = 220
+selected = "2026-11-23"
+
+[[downloads]]
+platform = "macos-universal"
+version = "1.0.37"
+url = "https://github.com/FigBug/Wavetable/releases/download/v1.0.37/Wavetable.pkg"
+origin = "github-release"
+sha256 = "490cd4d3a47ed6a40ed08174a64826de0d4486c30996d3e830595b653aeab6ac"
+size = 96232496
+archive = "pkg"
+install = "installer"
+signed = "notarized"
+
+[[downloads]]
+platform = "windows-x86_64"
+version = "1.0.37"
+url = "https://github.com/FigBug/Wavetable/releases/download/v1.0.37/Wavetable.exe"
+origin = "github-release"
+sha256 = "178d9e9f961746e429c32584de7f135bb59e6338a83066b3ae541e3ab0313889"
+size = 55382432
+archive = "exe"
+install = "installer"
+signed = "not-checked"

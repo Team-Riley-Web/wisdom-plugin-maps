@@ -1,0 +1,34 @@
+# Vocal Gate by dan-k-k: a curated free plug-in (CURATION.md). Builds are the author's own.
+format = 1
+id = "vocal-gate"
+name = "Vocal Gate"
+author = "dan-k-k"
+category = "dynamics"
+license = "GPL-3.0"
+source = "https://github.com/dan-k-k/vocal-gate"
+summary = "Noise gate for voice that removes coughs and clicks."
+formats = ["au", "vst3"]
+stars = 69
+selected = "2026-11-23"
+
+[[downloads]]
+platform = "macos-arm64"
+version = "1.0.5"
+url = "https://github.com/dan-k-k/vocal-gate/releases/download/v1.0.5/VocalGate_Mac_Installer.pkg"
+origin = "github-release"
+sha256 = "999158108d567b928a0021ce58d37e04867daf58d722576586679c3779c8b374"
+size = 22596370
+archive = "pkg"
+install = "installer"
+signed = "unsigned"
+
+[[downloads]]
+platform = "windows-x86_64"
+version = "1.0.5"
+url = "https://github.com/dan-k-k/vocal-gate/releases/download/v1.0.5/VocalGate_Windows_Installer.exe"
+origin = "github-release"
+sha256 = "1126158ed3758842554dcfda295e1b3779b859387b8eeffad59ada632eabd76c"
+size = 31330154
+archive = "exe"
+install = "installer"
+signed = "not-checked"

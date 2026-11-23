@@ -1,0 +1,45 @@
+# NeuralNote by Damien Ronssin: a curated free plug-in (CURATION.md). Builds are the author's own.
+format = 1
+id = "neuralnote"
+name = "NeuralNote"
+author = "Damien Ronssin"
+category = "utility"
+license = "Apache-2.0"
+source = "https://github.com/DamRsn/NeuralNote"
+summary = "Audio to MIDI transcription."
+formats = ["au", "standalone", "vst3"]
+stars = 3531
+selected = "2026-11-23"
+
+[[downloads]]
+platform = "macos-arm64"
+version = "2.2.0"
+url = "https://github.com/DamRsn/NeuralNote/releases/download/v2.2.0/NeuralNote_Installer_Mac_arm64.pkg"
+origin = "github-release"
+sha256 = "e6483ad86d5e7befa7fb1fa08c89a14415b93b9bd222cc78b587122d13404403"
+size = 65510351
+archive = "pkg"
+install = "installer"
+signed = "notarized"
+
+[[downloads]]
+platform = "macos-x86_64"
+version = "2.2.0"
+url = "https://github.com/DamRsn/NeuralNote/releases/download/v2.2.0/NeuralNote_Installer_Mac_x64.pkg"
+origin = "github-release"
+sha256 = "109dfea3bf6fed48bcc82af3e72e2bf6d0edff65152f67e14f7a3554835c2ee1"
+size = 69884616
+archive = "pkg"
+install = "installer"
+signed = "notarized"
+
+[[downloads]]
+platform = "windows-x86_64"
+version = "2.2.0"
+url = "https://github.com/DamRsn/NeuralNote/releases/download/v2.2.0/NeuralNote_Installer_Windows_x64.exe"
+origin = "github-release"
+sha256 = "a96f9a2c9cc2366ff180583c20f97dab730aff697f2c09a338945c7c7916c719"
+size = 42527792
+archive = "exe"
+install = "installer"
+signed = "not-checked"

@@ -1,0 +1,36 @@
+# filtr by tiagolr: a curated free plug-in (CURATION.md). Builds are the author's own.
+format = 1
+id = "filtr"
+name = "filtr"
+author = "tiagolr"
+category = "eq"
+license = "AGPL-3.0"
+source = "https://github.com/tiagolr/filtr"
+summary = "Filter moved by drawn envelopes and patterns."
+formats = ["au", "vst3"]
+stars = 179
+selected = "2026-11-23"
+
+[[downloads]]
+platform = "macos-universal"
+version = "1.3.0"
+url = "https://github.com/tiagolr/filtr/releases/download/v1.3.0/filtr-macos-v1.3.0.zip"
+origin = "github-release"
+sha256 = "4a3c2f6128dd6c9b883857ac1bf37d8265dd3e44c9fe77a03f8c61d2834f43f1"
+size = 13395910
+archive = "zip"
+install = "unpack"
+bundles = ["filtr-macos/AU/FILT-R.component", "filtr-macos/VST3/FILT-R.vst3"]
+signed = "unsigned"
+
+[[downloads]]
+platform = "windows-x86_64"
+version = "1.3.0"
+url = "https://github.com/tiagolr/filtr/releases/download/v1.3.0/filtr-win-v1.3.0.zip"
+origin = "github-release"
+sha256 = "7d77c3369ebc6ca8cc85baef08b1d9d8164cf79da2a2f3f4ca48fb54a9d87b98"
+size = 6599776
+archive = "zip"
+install = "unpack"
+bundles = ["filtr-win/VST3/FILT-R.vst3"]
+signed = "not-checked"

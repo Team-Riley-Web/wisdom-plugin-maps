@@ -1,0 +1,37 @@
+# Just a Sample by BOBONA: a curated free plug-in (CURATION.md). Builds are the author's own.
+format = 1
+id = "just-a-sample"
+name = "Just a Sample"
+author = "BOBONA"
+category = "instrument"
+instrument = "sampler"
+license = "MIT"
+source = "https://github.com/BOBONA/Just-a-Sample"
+summary = "Sampler."
+formats = ["au", "vst3"]
+stars = 228
+selected = "2026-11-23"
+
+[[downloads]]
+platform = "macos-universal"
+version = "1.3-latest"
+url = "https://github.com/BOBONA/Just-a-Sample/releases/download/v1.3-latest/Install.Just.a.Sample.macOS.v1.3.3.dmg"
+origin = "github-release"
+sha256 = "eb10bc401e1e565e7257fcf7f1c3b1e82a1aa7addcb5bd74b4dec0fe2b708f83"
+size = 14367237
+archive = "dmg"
+install = "installer"
+installer = "Just a Sample.pkg"
+signed = "unsigned"
+
+[[downloads]]
+platform = "windows-x86_64"
+version = "1.3-latest"
+url = "https://github.com/BOBONA/Just-a-Sample/releases/download/v1.3-latest/JAS.Windows.VST3.v1.3.3.zip"
+origin = "github-release"
+sha256 = "ef3ee663216fae0ce649c9ee75d40185d12fa27040383feea0b8d555c6f030c8"
+size = 3411798
+archive = "zip"
+install = "unpack"
+bundles = ["Just a Sample.vst3"]
+signed = "not-checked"

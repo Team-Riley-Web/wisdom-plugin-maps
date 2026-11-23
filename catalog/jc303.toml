@@ -1,0 +1,37 @@
+# JC303 by midilab: a curated free plug-in (CURATION.md). Builds are the author's own.
+format = 1
+id = "jc303"
+name = "JC303"
+author = "midilab"
+category = "instrument"
+instrument = "synth"
+license = "GPL-3.0"
+source = "https://github.com/midilab/jc303"
+summary = "Bass-line synth after the TB-303."
+formats = ["au", "clap", "vst3"]
+stars = 314
+selected = "2026-11-23"
+
+[[downloads]]
+platform = "macos-universal"
+version = "0.14.0"
+url = "https://github.com/midilab/jc303/releases/download/v0.14.0/jc303-0.14.0-macos_universal-plugins.zip"
+origin = "github-release"
+sha256 = "dfdc9b7deb674d472dc8663ec03a8ea177bf5d752beac4058cd0ea309bd48107"
+size = 69267408
+archive = "zip"
+install = "unpack"
+bundles = ["JC-303_MacOS_Universal-0.14.0/AU/JC303.component", "JC-303_MacOS_Universal-0.14.0/CLAP/JC303.clap", "JC-303_MacOS_Universal-0.14.0/VST3/JC303.vst3"]
+signed = "unsigned"
+
+[[downloads]]
+platform = "windows-x86_64"
+version = "0.14.0"
+url = "https://github.com/midilab/jc303/releases/download/v0.14.0/jc303-0.14.0-windows_x64-plugins.zip"
+origin = "github-release"
+sha256 = "499c1bec494d9116999a52c13ae59ff503bdff32438e8ef4af5fce6408e08057"
+size = 27444816
+archive = "zip"
+install = "unpack"
+bundles = ["JC-303_Windows_X64-0.14.0/CLAP/JC303.clap", "JC-303_Windows_X64-0.14.0/VST3/JC303.vst3"]
+signed = "not-checked"

@@ -1,0 +1,47 @@
+# ZL Limiter by ZL Audio: a curated free plug-in (CURATION.md). Builds are the author's own.
+format = 1
+id = "zl-limiter"
+name = "ZL Limiter"
+author = "ZL Audio"
+category = "dynamics"
+license = "AGPL-3.0"
+source = "https://github.com/ZL-Audio/ZLLimiter"
+summary = "Limiter."
+formats = ["au", "vst3"]
+stars = 32
+selected = "2026-11-23"
+
+[[downloads]]
+platform = "macos-arm64"
+version = "0.1.0"
+url = "https://github.com/ZL-Audio/ZLLimiter/releases/download/0.1.0/ZL.Limiter-0.1.0-macOS-arm64.dmg"
+origin = "github-release"
+sha256 = "0cb4530042b91ca90ebe8d8a0c07e8890e7cba0fc75f3ee5e5ef328782a8753f"
+size = 5205833
+archive = "dmg"
+install = "installer"
+installer = "ZL Limiter-0.1.0-macOS-arm64.pkg"
+signed = "unsigned"
+
+[[downloads]]
+platform = "macos-x86_64"
+version = "0.1.0"
+url = "https://github.com/ZL-Audio/ZLLimiter/releases/download/0.1.0/ZL.Limiter-0.1.0-macOS-x86-64.dmg"
+origin = "github-release"
+sha256 = "f861b93a71076fa2ed58c3a076d5efff27cc570eaea954d2be5a1c74b97d1c9a"
+size = 5890023
+archive = "dmg"
+install = "installer"
+installer = "ZL Limiter-0.1.0-macOS-x86-64.pkg"
+signed = "unsigned"
+
+[[downloads]]
+platform = "windows-x86_64"
+version = "0.1.0"
+url = "https://github.com/ZL-Audio/ZLLimiter/releases/download/0.1.0/ZL.Limiter-0.1.0-Windows-x86-64.msi"
+origin = "github-release"
+sha256 = "9f209a71abdf7893c716ffd1ac5e238bebcc4e5ebf682c1438d11ad74b45d506"
+size = 5701632
+archive = "msi"
+install = "installer"
+signed = "not-checked"

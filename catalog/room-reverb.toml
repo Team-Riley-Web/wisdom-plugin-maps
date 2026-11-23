@@ -1,0 +1,36 @@
+# Room Reverb by cvde: a curated free plug-in (CURATION.md). Builds are the author's own.
+format = 1
+id = "room-reverb"
+name = "Room Reverb"
+author = "cvde"
+category = "reverb"
+license = "GPL-3.0"
+source = "https://github.com/cvde/RoomReverb"
+summary = "Algorithmic room reverb, mono or stereo in, stereo out."
+formats = ["au", "clap", "vst3"]
+stars = 148
+selected = "2026-11-23"
+
+[[downloads]]
+platform = "macos-universal"
+version = "1.4.1"
+url = "https://github.com/cvde/RoomReverb/releases/download/v1.4.1/RoomReverb-1.4.1-Mac-Plugin-Files.zip"
+origin = "github-release"
+sha256 = "ebf52d96d39b4e52a69ce3c87dbb443a54c434623dcaa0f51788322776da754e"
+size = 14553253
+archive = "zip"
+install = "unpack"
+bundles = ["AU/RoomReverb.component", "CLAP/RoomReverb.clap", "VST3/RoomReverb.vst3"]
+signed = "developer-id"
+
+[[downloads]]
+platform = "windows-x86_64"
+version = "1.4.1"
+url = "https://github.com/cvde/RoomReverb/releases/download/v1.4.1/RoomReverb-1.4.1-Windows-Plugin-Files.zip"
+origin = "github-release"
+sha256 = "a912f32036a648c45f65a927f959e571d10bb454fa01222f2b269b381d589d3d"
+size = 8243434
+archive = "zip"
+install = "unpack"
+bundles = ["CLAP/RoomReverb.clap", "VST3/RoomReverb.vst3"]
+signed = "not-checked"

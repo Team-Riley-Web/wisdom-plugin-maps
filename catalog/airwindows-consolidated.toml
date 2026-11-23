@@ -1,0 +1,38 @@
+# Airwindows Consolidated by Airwindows (Chris Johnson); packaged by Paul Walker: a curated free plug-in (CURATION.md). Builds are the author's own.
+format = 1
+id = "airwindows-consolidated"
+name = "Airwindows Consolidated"
+author = "Airwindows (Chris Johnson); packaged by Paul Walker"
+category = "de_esser"
+also = ["modulation", "saturation", "utility", "reverb", "delay", "dynamics", "eq"]
+license = "MIT"
+source = "https://github.com/baconpaul/airwin2rack"
+summary = "Every Airwindows effect in one plug-in, de-essers included (DeEss, DeBess), plus saturation, EQ, reverb and delay."
+formats = ["au", "clap", "standalone", "vst3"]
+stars = 757
+selected = "2026-11-23"
+
+[[downloads]]
+platform = "macos-universal"
+version = "2026-11-22-91b3343"
+url = "https://github.com/baconpaul/airwin2rack/releases/download/DAWPlugin/airwindows-consolidated-macOS-2026-11-22-91b3343.dmg"
+origin = "github-release"
+rolling = true
+sha256 = "08d826a8967f4e4635bec48c361c5889ebda7e0af2d747b26de4ad6c8d9e204d"
+size = 49636974
+archive = "dmg"
+install = "installer"
+installer = "airwindows-consolidated-macOS-2026-11-22-91b3343.pkg"
+signed = "notarized"
+
+[[downloads]]
+platform = "windows-x86_64"
+version = "2026-11-22-91b3343"
+url = "https://github.com/baconpaul/airwin2rack/releases/download/DAWPlugin/AirwindowsConsolidated-2026-11-22-91b3343-Windows-64bit-setup.exe"
+origin = "github-release"
+rolling = true
+sha256 = "d8155fe2bd8b3868f3ba530dfd1c0bd246646851e4c7637dff7e396013d4c871"
+size = 10970989
+archive = "exe"
+install = "installer"
+signed = "not-checked"

@@ -1,0 +1,36 @@
+# QDelay by tiagolr: a curated free plug-in (CURATION.md). Builds are the author's own.
+format = 1
+id = "qdelay"
+name = "QDelay"
+author = "tiagolr"
+category = "delay"
+license = "GPL-3.0"
+source = "https://github.com/tiagolr/qdelay"
+summary = "Dual delay."
+formats = ["au", "vst3"]
+stars = 166
+selected = "2026-11-23"
+
+[[downloads]]
+platform = "macos-universal"
+version = "1.2.3"
+url = "https://github.com/tiagolr/qdelay/releases/download/v1.2.3/qdelay-macos-v1.2.3.zip"
+origin = "github-release"
+sha256 = "0987616a8b0d5dc41961ca33cce4880b4e30006a44aaf917fe1870a3e8a604aa"
+size = 8877154
+archive = "zip"
+install = "unpack"
+bundles = ["qdelay-macos/AU/QDelay.component", "qdelay-macos/VST3/QDelay.vst3"]
+signed = "unsigned"
+
+[[downloads]]
+platform = "windows-x86_64"
+version = "1.2.3"
+url = "https://github.com/tiagolr/qdelay/releases/download/v1.2.3/qdelay-win-v1.2.3.zip"
+origin = "github-release"
+sha256 = "e2589d38dc99c5e91654afd5e95feca1609532f6752c4526387f62cf36134121"
+size = 3346241
+archive = "zip"
+install = "unpack"
+bundles = ["qdelay-win/QDelay.vst3"]
+signed = "not-checked"

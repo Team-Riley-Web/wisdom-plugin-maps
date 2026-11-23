@@ -1,0 +1,36 @@
+# JS80P by Attila M. Magyar: a curated free plug-in (CURATION.md). Builds are the author's own.
+format = 1
+id = "js80p"
+name = "JS80P"
+author = "Attila M. Magyar"
+category = "instrument"
+instrument = "synth"
+license = "GPL-3.0"
+source = "https://github.com/attilammagyar/js80p"
+summary = "Performance-oriented polyphonic synthesizer."
+formats = ["vst3"]
+stars = 147
+selected = "2026-11-23"
+
+[[downloads]]
+platform = "macos-universal"
+version = "4.1.1"
+url = "https://github.com/attilammagyar/js80p/releases/download/v4.1.1/js80p-4_1_1-macos-universal-vst3_bundle-signed.pkg"
+origin = "github-release"
+sha256 = "4606bf0844fb4e63fcb2e1ebe0791255954c83b261704643a8f5a6b3a5e8bb54"
+size = 5847995
+archive = "pkg"
+install = "installer"
+signed = "notarized"
+
+[[downloads]]
+platform = "windows-x86_64"
+version = "4.1.1"
+url = "https://github.com/attilammagyar/js80p/releases/download/v4.1.1/js80p-4_1_1-sse2-vst3_bundle.zip"
+origin = "github-release"
+sha256 = "d524a7c4f399051f1c1af872450a84c9f508d36a7349ee77f70a867cb9be7b49"
+size = 24456415
+archive = "zip"
+install = "unpack"
+bundles = ["js80p-4_1_1-sse2-vst3_bundle/js80p.vst3"]
+signed = "not-checked"

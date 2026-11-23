@@ -1,0 +1,36 @@
+# Noise Suppression for Voice (RNNoise) by werman: a curated free plug-in (CURATION.md). Builds are the author's own.
+format = 1
+id = "noise-suppression-for-voice"
+name = "Noise Suppression for Voice (RNNoise)"
+author = "werman"
+category = "utility"
+license = "GPL-3.0"
+source = "https://github.com/werman/noise-suppression-for-voice"
+summary = "Real-time noise suppression for voice (RNNoise)."
+formats = ["au", "vst3"]
+stars = 6996
+selected = "2026-11-23"
+
+[[downloads]]
+platform = "macos-universal"
+version = "1.22"
+url = "https://github.com/werman/noise-suppression-for-voice/releases/download/v1.22/macos-rnnoise.zip"
+origin = "github-release"
+sha256 = "a402f08819a48d2406656b502af918ab9d86469e0214bb04f79e58958df3ffc9"
+size = 28739246
+archive = "zip"
+install = "unpack"
+bundles = ["macos-rnnoise/rnnoise.component", "macos-rnnoise/rnnoise.vst3"]
+signed = "unsigned"
+
+[[downloads]]
+platform = "windows-x86_64"
+version = "1.22"
+url = "https://github.com/werman/noise-suppression-for-voice/releases/download/v1.22/win-rnnoise.zip"
+origin = "github-release"
+sha256 = "7fc1a031438c27cb5731bdd4b627cc890387752c26436fd7e7b29a9c67cc708e"
+size = 14047985
+archive = "zip"
+install = "unpack"
+bundles = ["win-rnnoise/rnnoise.vst3"]
+signed = "not-checked"

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Check plug-in map files: the JSON Schema, then the rules a schema can't express.
+"""Check plug-in maps and catalog entries: the JSON Schemas, then the rules a schema can't express.
 
-Usage: python3 tools/validate.py [maps/*.toml ...]   (default: every file in maps/)
+Usage: python3 tools/validate.py [maps/*.toml catalog/*.toml ...]   (default: every map and entry)
 Exit status 0 when every map passes; each problem is printed as `file: problem`.
 Needs Python 3.11+ (tomllib) and `jsonschema` (pip install -r tools/requirements.txt).
 """
@@ -15,6 +15,7 @@ import jsonschema
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SCHEMA = json.loads((ROOT / "schema" / "plugin-map.schema.json").read_text())
+CATALOG_SCHEMA = json.loads((ROOT / "schema" / "catalog-entry.schema.json").read_text())
 FILE_NAME = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*\.toml$")
 
 
@@ -61,7 +62,37 @@ def rules(m):
     return p
 
 
+def catalog_rules(path, e):
+    """A catalog entry: its id is its file name, each platform once, a macOS and a Windows build,
+    bundles exactly for unpacked archives, the instrument kind exactly for instruments, maps that exist."""
+    p = []
+    if e["id"] != path.stem:
+        p.append(f"id {e['id']!r} must be the file name {path.stem!r}")
+    plats = [d["platform"] for d in e["downloads"]]
+    if len(plats) != len(set(plats)):
+        p.append("a platform is listed twice")
+    if not any(x.startswith("macos") for x in plats) or "windows-x86_64" not in plats:
+        p.append("needs a macOS and a Windows x64 build")
+    for d in e["downloads"]:
+        unpack = d["install"] == "unpack"
+        if unpack and d["archive"] not in ("dmg", "zip", "tar.gz"):
+            p.append(f"{d['platform']}: only dmg, zip and tar.gz archives unpack")
+        if unpack != bool(d.get("bundles")):
+            p.append(f"{d['platform']}: bundles are listed for unpacked archives only, and they need some")
+        boxed = d["archive"] in ("dmg", "zip", "tar.gz")
+        if d["install"] == "installer" and boxed != ("installer" in d):
+            p.append(f"{d['platform']}: an installer inside a dmg or zip names its path (installer), and only then")
+    if (e["category"] == "instrument") != ("instrument" in e):
+        p.append("instrument (synth, sampler, drums) is given for instruments only, and they need it")
+    for m in e.get("maps", []):
+        if not (ROOT / "maps" / m).exists():
+            p.append(f"maps: {m} is not in maps/")
+    return p
+
+
 def check(path):
+    if path.parent.name == "catalog":
+        return check_entry(path)
     problems = []
     if not FILE_NAME.match(path.name):
         problems.append("file names are lower-case words joined by '-', ending .toml (vendor-product.toml)")
@@ -78,8 +109,25 @@ def check(path):
     return problems, m
 
 
+def check_entry(path):
+    problems = []
+    if not FILE_NAME.match(path.name):
+        problems.append("file names are lower-case words joined by '-', ending .toml")
+    try:
+        e = tomllib.loads(path.read_text(encoding="utf-8"))
+    except (tomllib.TOMLDecodeError, UnicodeDecodeError) as err:
+        return [f"not TOML: {err}"], None
+    validator = jsonschema.Draft202012Validator(CATALOG_SCHEMA)
+    for err in sorted(validator.iter_errors(e), key=lambda x: list(x.absolute_path)):
+        where = "/".join(str(x) for x in err.absolute_path) or "(top)"
+        problems.append(f"{where}: {err.message}")
+    if not problems:
+        problems += catalog_rules(path, e)
+    return problems, None
+
+
 def main(argv):
-    paths = [pathlib.Path(a) for a in argv] or sorted((ROOT / "maps").glob("*.toml"))
+    paths = [pathlib.Path(a) for a in argv] or sorted((ROOT / "maps").glob("*.toml")) + sorted((ROOT / "catalog").glob("*.toml"))
     if not paths:
         print("no maps to check")
         return 1
@@ -95,7 +143,7 @@ def main(argv):
         for prob in problems:
             print(f"{path}: {prob}")
         failed += bool(problems)
-    print(f"{len(paths) - failed} of {len(paths)} maps pass")
+    print(f"{len(paths) - failed} of {len(paths)} files pass")
     return 1 if failed else 0
 
 

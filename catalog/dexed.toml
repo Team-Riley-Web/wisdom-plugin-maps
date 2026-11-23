@@ -1,0 +1,36 @@
+# Dexed by Digital Suburban (asb2m10): a curated free plug-in (CURATION.md). Builds are the author's own.
+format = 1
+id = "dexed"
+name = "Dexed"
+author = "Digital Suburban (asb2m10)"
+category = "instrument"
+instrument = "synth"
+license = "GPL-3.0"
+source = "https://github.com/asb2m10/dexed"
+summary = "FM synthesizer after the DX7."
+formats = ["au", "clap", "standalone", "vst3"]
+stars = 3678
+selected = "2026-11-23"
+
+[[downloads]]
+platform = "macos-universal"
+version = "1.1.0"
+url = "https://github.com/asb2m10/dexed/releases/download/v1.1.0/Dexed-1.1.0-macOS.dmg"
+origin = "github-release"
+sha256 = "f95b5d4a8985af444094fd3d76c5f4c86795f56169b9b9a1f4d620bb54c300ce"
+size = 22849347
+archive = "dmg"
+install = "installer"
+installer = "Dexed-1.1.0-macOS.pkg"
+signed = "notarized"
+
+[[downloads]]
+platform = "windows-x86_64"
+version = "1.1.0"
+url = "https://github.com/asb2m10/dexed/releases/download/v1.1.0/Dexed-1.1.0-win.exe"
+origin = "github-release"
+sha256 = "a5ebac7578f45ccf691cd5887b0af0c7206bdc763e85d479795c2c1866f54d5f"
+size = 13827494
+archive = "exe"
+install = "installer"
+signed = "not-checked"

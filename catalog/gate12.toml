@@ -1,0 +1,36 @@
+# gate12 by tiagolr: a curated free plug-in (CURATION.md). Builds are the author's own.
+format = 1
+id = "gate12"
+name = "gate12"
+author = "tiagolr"
+category = "dynamics"
+license = "GPL-3.0"
+source = "https://github.com/tiagolr/gate12"
+summary = "Trance gate and volume shaper from drawn patterns."
+formats = ["au", "vst3"]
+stars = 326
+selected = "2026-11-23"
+
+[[downloads]]
+platform = "macos-universal"
+version = "1.3.3"
+url = "https://github.com/tiagolr/gate12/releases/download/v1.3.3/gate12-macos-v1.3.3.zip"
+origin = "github-release"
+sha256 = "2c11517bd9b59a83fa813fe9f933c4233deff5c7571b4e299c8b6fd91b2e7189"
+size = 12505885
+archive = "zip"
+install = "unpack"
+bundles = ["gate12-macos/AU/GATE-12.component", "gate12-macos/VST3/GATE-12.vst3"]
+signed = "unsigned"
+
+[[downloads]]
+platform = "windows-x86_64"
+version = "1.3.3"
+url = "https://github.com/tiagolr/gate12/releases/download/v1.3.3/gate12-win-v1.3.3.zip"
+origin = "github-release"
+sha256 = "93b1056a40a341452804260a165ce9ce0feaad65eedbcf192319910671f54cf5"
+size = 6383770
+archive = "zip"
+install = "unpack"
+bundles = ["gate12-win/VST3/GATE-12.vst3"]
+signed = "not-checked"

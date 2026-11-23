@@ -1,0 +1,37 @@
+# Homecorrupter by igorski: a curated free plug-in (CURATION.md). Builds are the author's own.
+format = 1
+id = "homecorrupter"
+name = "Homecorrupter"
+author = "igorski"
+category = "saturation"
+also = ["modulation"]
+license = "MIT"
+source = "https://github.com/igorski/homecorrupter"
+summary = "Lo-fi degrader: lower sample rate, bit depth and speed on the fly."
+formats = ["vst3"]
+stars = 66
+selected = "2026-11-23"
+
+[[downloads]]
+platform = "macos-universal"
+version = "1.2.0"
+url = "https://github.com/igorski/homecorrupter/releases/download/1.2.0/homecorrupter.1.2.0_macos.zip"
+origin = "github-release"
+sha256 = "3eeadf2e351fb6e8df4e276ac2d590a0da96cd176f612e4aa0bc1a0a51b4910b"
+size = 7731462
+archive = "zip"
+install = "unpack"
+bundles = ["VST3/homecorrupter.vst3"]
+signed = "developer-id"
+
+[[downloads]]
+platform = "windows-x86_64"
+version = "1.2.0"
+url = "https://github.com/igorski/homecorrupter/releases/download/1.2.0/homecorrupter.1.2.0_windows.zip"
+origin = "github-release"
+sha256 = "358cd3c09ebc37fea8979aae649cdbfbe066696a080d63efdd2cf6dd10d6d6ab"
+size = 2352030
+archive = "zip"
+install = "unpack"
+bundles = ["Windows 64-Bit/VST3/homecorrupter.vst3"]
+signed = "not-checked"

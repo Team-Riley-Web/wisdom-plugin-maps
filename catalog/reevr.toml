@@ -1,0 +1,36 @@
+# reevr by tiagolr: a curated free plug-in (CURATION.md). Builds are the author's own.
+format = 1
+id = "reevr"
+name = "reevr"
+author = "tiagolr"
+category = "reverb"
+license = "GPL-3.0"
+source = "https://github.com/tiagolr/reevr"
+summary = "Convolution reverb with modulation before and after."
+formats = ["au", "vst3"]
+stars = 301
+selected = "2026-11-23"
+
+[[downloads]]
+platform = "macos-universal"
+version = "1.4.0"
+url = "https://github.com/tiagolr/reevr/releases/download/v1.4.0/reevr-macos-v1.4.0.zip"
+origin = "github-release"
+sha256 = "92e069e942ac0f286169b32d0fd175483a10e07da6470a3582c93cc8a741c9e3"
+size = 19300930
+archive = "zip"
+install = "unpack"
+bundles = ["reevr-macos/AU/REEV-R.component", "reevr-macos/VST3/REEV-R.vst3"]
+signed = "unsigned"
+
+[[downloads]]
+platform = "windows-x86_64"
+version = "1.4.0"
+url = "https://github.com/tiagolr/reevr/releases/download/v1.4.0/reevr-win-v1.4.0.zip"
+origin = "github-release"
+sha256 = "d22f2c2421f4d3b52040bad8878ec37c96f1c69413f231f689769833dfffb864"
+size = 7730204
+archive = "zip"
+install = "unpack"
+bundles = ["reevr-win/VST3/REEV-R.vst3"]
+signed = "not-checked"

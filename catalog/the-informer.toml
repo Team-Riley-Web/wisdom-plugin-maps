@@ -1,0 +1,36 @@
+# The Informer by Valerio Orlandini: a curated free plug-in (CURATION.md). Builds are the author's own.
+format = 1
+id = "the-informer"
+name = "The Informer"
+author = "Valerio Orlandini"
+category = "utility"
+license = "GPL-3.0"
+source = "https://github.com/valeriorlandini/theinformer"
+summary = "Live audio descriptors (loudness, spectral features)."
+formats = ["au", "vst3"]
+stars = 54
+selected = "2026-11-23"
+
+[[downloads]]
+platform = "macos-x86_64"
+version = "0.4.0"
+url = "https://github.com/valeriorlandini/theinformer/releases/download/v0.4.0/The_Informer-0.4.0_macOS.zip"
+origin = "github-release"
+sha256 = "34c6bd42a5ec56386116e26a2dfe0b4bdad5db81a255290b29c6fc1229d0df39"
+size = 26306165
+archive = "zip"
+install = "unpack"
+bundles = ["AU/The Informer.component", "VST3/The Informer.vst3"]
+signed = "unsigned"
+
+[[downloads]]
+platform = "windows-x86_64"
+version = "0.4.0"
+url = "https://github.com/valeriorlandini/theinformer/releases/download/v0.4.0/The_Informer-0.4.0_Windows.zip"
+origin = "github-release"
+sha256 = "2fddb5a5629684ac31a15c5c295e84851799e2b230fd6fafacb8d120afe98cc4"
+size = 10335649
+archive = "zip"
+install = "unpack"
+bundles = ["VST3/The Informer.vst3"]
+signed = "not-checked"

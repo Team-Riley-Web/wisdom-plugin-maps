@@ -29,6 +29,12 @@ plug-in up correctly with no guessing.
 
 7. Open a pull request. CI runs the same check and the sign-off check below.
 
+## The free plug-in catalog
+
+Catalog entries (`catalog/*.toml`) follow [CURATION.md](CURATION.md): suggest a plug-in in an issue
+or a PR with its entry; `tools/refresh_catalog.py` re-pins newer releases. Pin only the author's
+own downloads, with the size and SHA-256 you measured.
+
 ## What belongs here
 
 - Yes: plug-in identity and parameter facts (ids, names, ranges, units, defaults, choice labels),

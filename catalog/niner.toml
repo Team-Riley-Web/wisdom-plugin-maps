@@ -1,0 +1,49 @@
+# Niner by hyperfocusdsp: a curated free plug-in (CURATION.md). Builds are the author's own.
+format = 1
+id = "niner"
+name = "Niner"
+author = "hyperfocusdsp"
+category = "instrument"
+instrument = "drums"
+license = "GPL-3.0"
+source = "https://github.com/hyperfocusdsp/niner"
+summary = "Monophonic analog-style kick drum synthesizer."
+formats = ["clap", "vst3"]
+stars = 47
+selected = "2026-11-23"
+
+[[downloads]]
+platform = "macos-arm64"
+version = "1.0.1"
+url = "https://github.com/hyperfocusdsp/niner/releases/download/v1.0.1/niner-macos-arm64.tar.gz"
+origin = "github-release"
+sha256 = "689715d3ef2737f95aad1d4285d56dba2970145387d359ef8a67b006ac214e60"
+size = 23276528
+archive = "tar.gz"
+install = "unpack"
+bundles = ["niner-macos-arm64/niner.clap", "niner-macos-arm64/niner.vst3"]
+signed = "unsigned"
+
+[[downloads]]
+platform = "macos-x86_64"
+version = "1.0.1"
+url = "https://github.com/hyperfocusdsp/niner/releases/download/v1.0.1/niner-macos-x86_64.tar.gz"
+origin = "github-release"
+sha256 = "ebb7993da7a23fce126dab796bb577ea37e679400001cd3071ebede1a1c97df1"
+size = 24025465
+archive = "tar.gz"
+install = "unpack"
+bundles = ["niner-macos-x86_64/niner.clap", "niner-macos-x86_64/niner.vst3"]
+signed = "unsigned"
+
+[[downloads]]
+platform = "windows-x86_64"
+version = "1.0.1"
+url = "https://github.com/hyperfocusdsp/niner/releases/download/v1.0.1/niner-windows-x86_64.zip"
+origin = "github-release"
+sha256 = "b2a9b9ee2dd91e740b590d20d1b6d4094b9fd118fd88c546b420c7db0714a11e"
+size = 22861704
+archive = "zip"
+install = "unpack"
+bundles = ["niner-windows-x86_64/niner.clap", "niner-windows-x86_64/niner.vst3"]
+signed = "not-checked"

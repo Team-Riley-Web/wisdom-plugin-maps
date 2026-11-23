@@ -1,0 +1,49 @@
+# INTERSECT by tucktuckg00se: a curated free plug-in (CURATION.md). Builds are the author's own.
+format = 1
+id = "intersect"
+name = "INTERSECT"
+author = "tucktuckg00se"
+category = "instrument"
+instrument = "sampler"
+license = "GPL-3.0"
+source = "https://github.com/tucktuckg00se/INTERSECT"
+summary = "Time-stretching sample slicer with per-slice controls."
+formats = ["au", "vst3"]
+stars = 346
+selected = "2026-11-23"
+
+[[downloads]]
+platform = "macos-arm64"
+version = "0.20.0"
+url = "https://github.com/tucktuckg00se/INTERSECT/releases/download/v0.20.0/INTERSECT-v0.20.0-macOS-arm64.zip"
+origin = "github-release"
+sha256 = "c430072c25ad825f7c6725d161a21340e7a31fee6af5634dc19176e3cb9a9606"
+size = 10734483
+archive = "zip"
+install = "unpack"
+bundles = ["INTERSECT.component", "INTERSECT.vst3"]
+signed = "unsigned"
+
+[[downloads]]
+platform = "macos-x86_64"
+version = "0.20.0"
+url = "https://github.com/tucktuckg00se/INTERSECT/releases/download/v0.20.0/INTERSECT-v0.20.0-macOS-x64.zip"
+origin = "github-release"
+sha256 = "e8d04b96419b4e4437cfb3a82b0e2b684291e8ea652399929b5161d77ce7812d"
+size = 11674957
+archive = "zip"
+install = "unpack"
+bundles = ["INTERSECT.component", "INTERSECT.vst3"]
+signed = "unsigned"
+
+[[downloads]]
+platform = "windows-x86_64"
+version = "0.20.0"
+url = "https://github.com/tucktuckg00se/INTERSECT/releases/download/v0.20.0/INTERSECT-v0.20.0-Windows-x64.zip"
+origin = "github-release"
+sha256 = "f301ef1f2e1deaa9bf7b9272c5c6977d10345603df680db2ea43468cd9fad30b"
+size = 8168503
+archive = "zip"
+install = "unpack"
+bundles = ["INTERSECT.vst3"]
+signed = "not-checked"

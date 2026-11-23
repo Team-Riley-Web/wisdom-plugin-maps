@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a release's plugin-maps.json: every map in maps/, read from TOML, as one JSON file.
+"""Build a release's plugin-maps.json: every map in maps/ and every entry in catalog/, as one JSON file.
 
 Usage: python3 tools/bundle.py RELEASE [OUT]   (RELEASE like 2026.11.23; OUT default plugin-maps.json)
 The maintainer signs the result with minisign (trusted comment "wisdom-plugin-maps RELEASE") and
@@ -19,8 +19,9 @@ def main(argv):
         return 2
     release, out = argv[0], pathlib.Path(argv[1] if len(argv) > 1 else "plugin-maps.json")
     maps = [tomllib.loads(p.read_text(encoding="utf-8")) for p in sorted((ROOT / "maps").glob("*.toml"))]
-    out.write_text(json.dumps({"format": 1, "release": release, "maps": maps}, separators=(",", ":")), encoding="utf-8")
-    print(f"{out}: {len(maps)} maps, release {release}")
+    catalog = [tomllib.loads(p.read_text(encoding="utf-8")) for p in sorted((ROOT / "catalog").glob("*.toml"))]
+    out.write_text(json.dumps({"format": 1, "release": release, "maps": maps, "catalog": catalog}, separators=(",", ":")), encoding="utf-8")
+    print(f"{out}: {len(maps)} maps, {len(catalog)} catalog entries, release {release}")
     return 0
 
 

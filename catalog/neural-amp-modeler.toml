@@ -1,0 +1,38 @@
+# Neural Amp Modeler (Gateway) by Steven Atkinson: a curated free plug-in (CURATION.md). Builds are the author's own.
+format = 1
+id = "neural-amp-modeler"
+name = "Neural Amp Modeler (Gateway)"
+author = "Steven Atkinson"
+category = "saturation"
+license = "MIT"
+source = "https://github.com/sdatkinson/NeuralAmpModelerPlugin"
+site = "https://www.neuralampmodeler.com/users"
+summary = "Plays Neural Amp Modeler captures of amps and pedals."
+formats = ["au", "standalone", "vst3"]
+stars = 3080
+selected = "2026-11-23"
+exception = "The author publishes pre-built installers (Gateway, his build of this MIT plug-in) only on his official site, not on GitHub. Listed at the owner's request (2026-11-23)."
+
+[[downloads]]
+platform = "macos-universal"
+version = "1.0.1"
+url = "https://drive.usercontent.google.com/download?id=1twtHzYU0SQGwUYVCjMHmpjUS_8AiQElt&export=download&confirm=t"
+origin = "official-site"
+sha256 = "94655edaf034fa33b62680e2a70c8ca8b9759270ca218a750d8d520368f3a7c4"
+size = 9263218
+archive = "dmg"
+install = "installer"
+installer = "Gateway Installer.pkg"
+signed = "notarized"
+
+[[downloads]]
+platform = "windows-x86_64"
+version = "1.0.1"
+url = "https://drive.usercontent.google.com/download?id=1MDZmrxIKPdkt7GJwW-IYlRK28Y4jjUVg&export=download&confirm=t"
+origin = "official-site"
+sha256 = "06571761c8429a3f2b6bd3a35ebd9729eb1e1fd5015fa0ce26fe8ed37d04f9b1"
+size = 4019813
+archive = "zip"
+install = "installer"
+installer = "Gateway Installer.exe"
+signed = "not-checked"

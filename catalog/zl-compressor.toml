@@ -1,0 +1,47 @@
+# ZL Compressor by ZL Audio: a curated free plug-in (CURATION.md). Builds are the author's own.
+format = 1
+id = "zl-compressor"
+name = "ZL Compressor"
+author = "ZL Audio"
+category = "dynamics"
+license = "AGPL-3.0"
+source = "https://github.com/ZL-Audio/ZLCompressor"
+summary = "Compressor and dynamic range processor."
+formats = ["au", "standalone", "vst3"]
+stars = 233
+selected = "2026-11-23"
+
+[[downloads]]
+platform = "macos-arm64"
+version = "0.6.1"
+url = "https://github.com/ZL-Audio/ZLCompressor/releases/download/0.6.1/ZL.Compressor-0.6.1-macOS-arm64.dmg"
+origin = "github-release"
+sha256 = "7a38ed5a54aea2300ee430decbd261d5c6539573ff6e7d56071bc49ce3d6df0d"
+size = 12527352
+archive = "dmg"
+install = "installer"
+installer = "ZL Compressor-0.6.1-macOS-arm64.pkg"
+signed = "unsigned"
+
+[[downloads]]
+platform = "macos-x86_64"
+version = "0.6.1"
+url = "https://github.com/ZL-Audio/ZLCompressor/releases/download/0.6.1/ZL.Compressor-0.6.1-macOS-x86-64.dmg"
+origin = "github-release"
+sha256 = "f3398bf867c30713c20a3e295a1b204b7dee725c4bd33f9705b0a52ddc6b4e8e"
+size = 14112081
+archive = "dmg"
+install = "installer"
+installer = "ZL Compressor-0.6.1-macOS-x86-64.pkg"
+signed = "unsigned"
+
+[[downloads]]
+platform = "windows-x86_64"
+version = "0.6.1"
+url = "https://github.com/ZL-Audio/ZLCompressor/releases/download/0.6.1/ZL.Compressor-0.6.1-Windows-x86-64.msi"
+origin = "github-release"
+sha256 = "4e6e14da03cbd4513d890fac01889982e3cd96b2cdeb73678507a09b0c463f7f"
+size = 10944512
+archive = "msi"
+install = "installer"
+signed = "not-checked"

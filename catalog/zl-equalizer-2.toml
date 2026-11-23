@@ -1,0 +1,47 @@
+# ZL Equalizer 2 by ZL Audio: a curated free plug-in (CURATION.md). Builds are the author's own.
+format = 1
+id = "zl-equalizer-2"
+name = "ZL Equalizer 2"
+author = "ZL Audio"
+category = "eq"
+license = "AGPL-3.0"
+source = "https://github.com/ZL-Audio/ZLEqualizer"
+summary = "Dynamic equalizer."
+formats = ["au", "standalone", "vst3"]
+stars = 1080
+selected = "2026-11-23"
+
+[[downloads]]
+platform = "macos-arm64"
+version = "1.4.2"
+url = "https://github.com/ZL-Audio/ZLEqualizer/releases/download/1.4.2/ZL.Equalizer.2-1.4.2-macOS-arm64.dmg"
+origin = "github-release"
+sha256 = "12122f35b25d3707aac19e83ee9d57a47e7257962c92e40650392bb2e1b95fff"
+size = 11413507
+archive = "dmg"
+install = "installer"
+installer = "ZL Equalizer 2-1.4.2-macOS-arm64.pkg"
+signed = "unsigned"
+
+[[downloads]]
+platform = "macos-x86_64"
+version = "1.4.2"
+url = "https://github.com/ZL-Audio/ZLEqualizer/releases/download/1.4.2/ZL.Equalizer.2-1.4.2-macOS-x86-64.dmg"
+origin = "github-release"
+sha256 = "734eecee702bdb3d59651618393805fa9d3bbc97fe0df046b4a77090aacad25f"
+size = 12899502
+archive = "dmg"
+install = "installer"
+installer = "ZL Equalizer 2-1.4.2-macOS-x86-64.pkg"
+signed = "unsigned"
+
+[[downloads]]
+platform = "windows-x86_64"
+version = "1.4.2"
+url = "https://github.com/ZL-Audio/ZLEqualizer/releases/download/1.4.2/ZL.Equalizer.2-1.4.2-Windows-x86-64.msi"
+origin = "github-release"
+sha256 = "fd890296db3887443d9a0dc1133df80b0b0c504d94dc30bcd4cb85a57ffad4a9"
+size = 10375168
+archive = "msi"
+install = "installer"
+signed = "not-checked"

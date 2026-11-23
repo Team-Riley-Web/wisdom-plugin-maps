@@ -1,0 +1,36 @@
+# Six Sines by Paul Walker (baconpaul): a curated free plug-in (CURATION.md). Builds are the author's own.
+format = 1
+id = "six-sines"
+name = "Six Sines"
+author = "Paul Walker (baconpaul)"
+category = "instrument"
+instrument = "synth"
+license = "MIT"
+source = "https://github.com/baconpaul/six-sines"
+summary = "Six-operator phase modulation synth."
+formats = ["au", "clap", "standalone", "vst3"]
+stars = 317
+selected = "2026-11-23"
+
+[[downloads]]
+platform = "macos-universal"
+version = "1.2.1"
+url = "https://github.com/baconpaul/six-sines/releases/download/v1.2.1/six-sines-macOS-2026-07-20-18ecb36.dmg"
+origin = "github-release"
+sha256 = "2da3de486551da88e06162a90ef917019c46a25c01d1ec0cdf5e0416b7394d6c"
+size = 63165016
+archive = "dmg"
+install = "installer"
+installer = "six-sines-macOS-2026-07-20-18ecb36.pkg"
+signed = "notarized"
+
+[[downloads]]
+platform = "windows-x86_64"
+version = "1.2.1"
+url = "https://github.com/baconpaul/six-sines/releases/download/v1.2.1/six-sines-Windows-2026-07-20-18ecb36.exe"
+origin = "github-release"
+sha256 = "d3cb52a46cad109f551d45387769b99fd28c261235e54c75ea5c5a701dba9b14"
+size = 9787714
+archive = "exe"
+install = "installer"
+signed = "not-checked"

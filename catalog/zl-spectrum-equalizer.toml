@@ -1,0 +1,47 @@
+# ZL Spectrum Equalizer by ZL Audio: a curated free plug-in (CURATION.md). Builds are the author's own.
+format = 1
+id = "zl-spectrum-equalizer"
+name = "ZL Spectrum Equalizer"
+author = "ZL Audio"
+category = "eq"
+license = "AGPL-3.0"
+source = "https://github.com/ZL-Audio/ZLSpectrumEqualizer"
+summary = "Dynamic equalizer that works on the spectrum."
+formats = ["au", "vst3"]
+stars = 91
+selected = "2026-11-23"
+
+[[downloads]]
+platform = "macos-arm64"
+version = "0.1.2"
+url = "https://github.com/ZL-Audio/ZLSpectrumEqualizer/releases/download/0.1.2/ZL.Spectrum.Equalizer-0.1.2-macOS-arm64.dmg"
+origin = "github-release"
+sha256 = "bbb1be4f72fda6242a0eb6225291eab2c2204d4286aa2891f1ecc3c1a3c6dca7"
+size = 5808458
+archive = "dmg"
+install = "installer"
+installer = "ZL Spectrum Equalizer-0.1.2-macOS-arm64.pkg"
+signed = "unsigned"
+
+[[downloads]]
+platform = "macos-x86_64"
+version = "0.1.2"
+url = "https://github.com/ZL-Audio/ZLSpectrumEqualizer/releases/download/0.1.2/ZL.Spectrum.Equalizer-0.1.2-macOS-x86-64.dmg"
+origin = "github-release"
+sha256 = "7a86445b239421cb4c77745494579f675cd7b4dacdf3e0a855ce864cbd1acda3"
+size = 6672487
+archive = "dmg"
+install = "installer"
+installer = "ZL Spectrum Equalizer-0.1.2-macOS-x86-64.pkg"
+signed = "unsigned"
+
+[[downloads]]
+platform = "windows-x86_64"
+version = "0.1.2"
+url = "https://github.com/ZL-Audio/ZLSpectrumEqualizer/releases/download/0.1.2/ZL.Spectrum.Equalizer-0.1.2-Windows-x86-64.msi"
+origin = "github-release"
+sha256 = "0f67904d0e39bccabeba0f754701faac862332357af37e0a3602fb5576e30c36"
+size = 6086656
+archive = "msi"
+install = "installer"
+signed = "not-checked"
