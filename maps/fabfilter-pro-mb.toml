@@ -1,0 +1,29 @@
+# FabFilter Pro-MB: plug-in identity and parameter data for hosts (Wisdom Pro reads it).
+format = 1
+revision = 1
+
+sources = [
+  "Identity: the Audio Unit's component description and version (Info.plist)",
+  "VST3 class id: the VST3 scan",
+  "CLAP id: the CLAP plug-in factory's descriptor",
+]
+
+[plugin]
+name = "Pro-MB"
+vendor = "FabFilter"
+type = "dynamics"
+roles = ["multiband"]
+tested_versions = ["1.31"]
+
+[formats.au]
+type = "aumf"
+subtype = "FPMb"
+manufacturer = "FabF"
+
+[formats.vst3]
+class_id = "C3B68142C79846F282B73CABDF139076"
+matches_au = false
+
+[formats.clap]
+id = "com.FabFilter.preset-discovery.Pro-MB.1"
+

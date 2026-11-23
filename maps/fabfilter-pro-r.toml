@@ -1,0 +1,29 @@
+# FabFilter Pro-R: plug-in identity and parameter data for hosts (Wisdom Pro reads it).
+format = 1
+revision = 1
+
+sources = [
+  "Identity: the Audio Unit's component description and version (Info.plist)",
+  "VST3 class id: the VST3 scan",
+  "CLAP id: the CLAP plug-in factory's descriptor",
+]
+
+[plugin]
+name = "Pro-R"
+vendor = "FabFilter"
+type = "reverb"
+roles = ["reverb"]
+tested_versions = ["1.18"]
+
+[formats.au]
+type = "aumf"
+subtype = "FPRr"
+manufacturer = "FabF"
+
+[formats.vst3]
+class_id = "036EB5302A5911E2A28170076288709B"
+matches_au = false
+
+[formats.clap]
+id = "com.FabFilter.preset-discovery.Pro-R.1"
+

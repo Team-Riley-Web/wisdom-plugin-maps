@@ -1,0 +1,24 @@
+# Saint Mike DSP PitchCure: plug-in identity and parameter data for hosts (Wisdom Pro reads it).
+format = 1
+revision = 1
+
+sources = [
+  "Identity: the Audio Unit's component description and version (Info.plist)",
+  "VST3 class id: the VST3 scan",
+]
+
+[plugin]
+name = "PitchCure"
+vendor = "Saint Mike DSP"
+type = "pitch"
+roles = ["pitch_correction"]
+
+[formats.au]
+type = "aumf"
+subtype = "PtCu"
+manufacturer = "SMik"
+
+[formats.vst3]
+class_id = "ABCDEF019182FAEB534D696B50744375"
+matches_au = false
+

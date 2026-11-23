@@ -1,0 +1,102 @@
+# Valhalla DSP ValhallaDelay: plug-in identity and parameter data for hosts (Wisdom Pro reads it).
+format = 1
+revision = 1
+
+sources = [
+  "Identity: the Audio Unit's component description and version (Info.plist)",
+  "VST3 class id: the VST3 scan; parameters compared with the AU on one Mac with both installed",
+  "Calibration: measured by Wisdom Pro on the installed plug-in by rendering test signals",
+]
+
+[plugin]
+name = "ValhallaDelay"
+vendor = "Valhalla DSP"
+type = "delay"
+roles = ["delay"]
+tested_versions = ["2.5.1"]
+
+[formats.au]
+type = "aufx"
+subtype = "dLay"
+manufacturer = "oDin"
+
+[formats.vst3]
+class_id = "565354644C617976616C68616C6C6164"
+matches_au = true
+
+[[controls]]
+role = "wet"
+param = "Mix"
+full_scale = 1.0
+notes = "Equal-power mix, as the Valhalla reverbs."
+
+[[controls]]
+role = "time_left"
+param = "DelayL_Ms"
+calibration = "time_ms"
+
+[[controls]]
+role = "time_right"
+param = "DelayR_Ms"
+calibration = "time_ms"
+
+[[controls]]
+role = "feedback"
+param = "Feedback"
+calibration = "feedback_pct"
+
+# Free time (no sync), no modulation, wow or flutter, so each repeat lands on the same time; Mode
+# 0.396 is native step 9 of 24 (the Audio Unit lists no names), the step whose first and second
+# repeats are exact copies of the signal (band-limited correlation 1.00).
+[[fixed]]
+param = "DelayLSync"
+value = 0.0
+
+[[fixed]]
+param = "DelayRSync"
+value = 0.0
+
+[[fixed]]
+param = "ModDepth"
+value = 0.0
+
+[[fixed]]
+param = "Wow"
+value = 0.0
+
+[[fixed]]
+param = "Flutter"
+value = 0.0
+
+[[fixed]]
+param = "Mode"
+value = 0.396
+
+# x: echo time in ms with the fixed settings above: DelayL_Ms x 1000 up to 0.5, then the measured
+# steps; above 0.75 the control is not verified.
+[calibration.time_ms]
+x = "time_ms"
+method = "measured lag of the first repeat"
+points = [
+  [50.0, 0.05],
+  [500.0, 0.5],
+  [596.0, 0.55],
+  [692.5, 0.6],
+  [789.0, 0.65],
+  [885.0, 0.7],
+  [981.0, 0.75],
+]
+
+# x: second echo / first echo, percent (the repeat about 1.9 x the control).
+[calibration.feedback_pct]
+x = "feedback_pct"
+method = "level of the second repeat against the first"
+points = [
+  [0.0, 0.0],
+  [19.0, 0.1],
+  [38.0, 0.2],
+  [57.0, 0.3],
+  [75.7, 0.4],
+  [94.0, 0.5],
+]
+

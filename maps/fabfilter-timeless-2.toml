@@ -1,0 +1,29 @@
+# FabFilter Timeless 2: plug-in identity and parameter data for hosts (Wisdom Pro reads it).
+format = 1
+revision = 1
+
+sources = [
+  "Identity: the Audio Unit's component description and version (Info.plist)",
+  "VST3 class id: the VST3 scan",
+  "CLAP id: the CLAP plug-in factory's descriptor",
+]
+
+[plugin]
+name = "Timeless 2"
+vendor = "FabFilter"
+type = "delay"
+roles = ["delay"]
+tested_versions = ["2.39"]
+
+[formats.au]
+type = "aumf"
+subtype = "FTms"
+manufacturer = "FabF"
+
+[formats.vst3]
+class_id = "E45B65335E7D4E28B4CA15D7940A3A6D"
+matches_au = false
+
+[formats.clap]
+id = "com.FabFilter.preset-discovery.Timeless.2"
+

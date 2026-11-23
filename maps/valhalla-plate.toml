@@ -1,0 +1,77 @@
+# Valhalla DSP ValhallaPlate: plug-in identity and parameter data for hosts (Wisdom Pro reads it).
+format = 1
+revision = 1
+
+sources = [
+  "Identity: the Audio Unit's component description and version (Info.plist)",
+  "VST3 class id: the VST3 scan; parameters compared with the AU on one Mac with both installed",
+  "Calibration: measured by Wisdom Pro on the installed plug-in by rendering test signals",
+]
+
+[plugin]
+name = "ValhallaPlate"
+vendor = "Valhalla DSP"
+type = "reverb"
+roles = ["reverb"]
+tested_versions = ["1.6.8"]
+
+[formats.au]
+type = "aufx"
+subtype = "plat"
+manufacturer = "oDin"
+
+[formats.vst3]
+class_id = "565354706C617476616C68616C6C6170"
+matches_au = true
+
+[[controls]]
+role = "wet"
+param = "Mix"
+full_scale = 1.0
+notes = "Equal-power mix: the direct path is cos(mix x pi/2)."
+
+[[controls]]
+role = "decay"
+param = "Decay"
+calibration = "decay_s"
+
+[[controls]]
+role = "predelay"
+param = "PreDelay"
+calibration = "predelay_ms"
+
+# x: decay in seconds, as the plug-in's own tail rendered at 20 % mix, read by Wisdom Pro's space estimate (not an RT60).
+[calibration.decay_s]
+x = "decay_s"
+method = "the plug-in's own tail rendered at 20 % mix, read by Wisdom Pro's space estimate (not an RT60)"
+points = [
+  [0.55, 0.0],
+  [0.98, 0.1],
+  [1.45, 0.2],
+  [1.91, 0.3],
+  [2.38, 0.4],
+  [2.86, 0.5],
+  [4.03, 0.6],
+  [5.23, 0.7],
+  [7.67, 0.8],
+]
+
+# x: pre-delay in ms on top of the first return at pre-delay 0.
+[calibration.predelay_ms]
+x = "predelay_ms"
+method = "time of the first sample 60 dB under the peak, less the first return at pre-delay 0"
+points = [
+  [0.0, 0.0],
+  [0.4, 0.05],
+  [2.3, 0.1],
+  [11.8, 0.2],
+  [30.5, 0.3],
+  [100.0, 0.5],
+  [256.3, 0.75],
+  [500.0, 1.0],
+]
+
+[measurements]
+# The first return at pre-delay 0, ms (the first sample 60 dB under the peak).
+first_return_ms = 21.3
+

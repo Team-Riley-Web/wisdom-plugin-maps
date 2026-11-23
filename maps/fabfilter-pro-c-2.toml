@@ -1,0 +1,131 @@
+# FabFilter Pro-C 2: plug-in identity and parameter data for hosts (Wisdom Pro reads it).
+format = 1
+revision = 1
+
+sources = [
+  "Identity: the Audio Unit's component description and version (Info.plist)",
+  "VST3 class id: the VST3 scan; parameters compared with the AU on one Mac with both installed",
+  "CLAP id: the CLAP plug-in factory's descriptor",
+  "Calibration: measured by Wisdom Pro on the installed plug-in by rendering test signals",
+]
+
+[plugin]
+name = "Pro-C 2"
+vendor = "FabFilter"
+type = "dynamics"
+roles = ["compressor"]
+tested_versions = ["2.20"]
+
+[formats.au]
+type = "aumf"
+subtype = "FC2p"
+manufacturer = "FabF"
+
+[formats.vst3]
+class_id = "79F415E3C8E74807AD5DA3CF7024F618"
+matches_au = true
+
+[formats.clap]
+id = "com.FabFilter.preset-discovery.Pro-C.2"
+
+[[controls]]
+role = "ratio"
+param = "Ratio"
+calibration = "ratio"
+
+[[controls]]
+role = "attack"
+param = "Attack"
+calibration = "attack_ms"
+
+[[controls]]
+role = "release"
+param = "Release"
+calibration = "release_ms"
+
+# x: the static ratio (x:1) the control gives.
+[calibration.ratio]
+x = "ratio"
+method = "A 4 kHz sine stepped from -30 to -20 dBFS (static ratio) and from -70 to -20 dBFS and back (time to 63 % of the gain reduction on the way in, 37 % on the way out); Style Clean, knee 0, no lookahead. Attack stops rising near 53 ms at control 0.9, so its table ends there"
+points = [
+  [1.0, 0.0],
+  [1.05, 0.05],
+  [1.09, 0.1],
+  [1.16, 0.15],
+  [1.24, 0.2],
+  [1.35, 0.25],
+  [1.47, 0.3],
+  [1.71, 0.35],
+  [1.94, 0.4],
+  [2.29, 0.45],
+  [2.63, 0.5],
+  [3.18, 0.55],
+  [3.72, 0.6],
+  [4.56, 0.65],
+  [5.37, 0.7],
+  [6.14, 0.75],
+  [6.89, 0.8],
+  [7.61, 0.85],
+  [8.30, 0.9],
+  [10.28, 0.92],
+  [14.28, 0.94],
+  [19.51, 0.96],
+  [27.46, 0.98],
+  [46.06, 1.0],
+]
+
+# x: attack, ms to 63 % of the gain reduction.
+[calibration.attack_ms]
+x = "attack_ms"
+method = "A 4 kHz sine stepped from -30 to -20 dBFS (static ratio) and from -70 to -20 dBFS and back (time to 63 % of the gain reduction on the way in, 37 % on the way out); Style Clean, knee 0, no lookahead. Attack stops rising near 53 ms at control 0.9, so its table ends there"
+points = [
+  [0.25, 0.1],
+  [0.5, 0.15],
+  [1.25, 0.2],
+  [2.25, 0.25],
+  [3.75, 0.3],
+  [5.75, 0.35],
+  [8.5, 0.4],
+  [11.75, 0.45],
+  [15.75, 0.5],
+  [20.25, 0.55],
+  [25.25, 0.6],
+  [30.5, 0.65],
+  [36.25, 0.7],
+  [41.75, 0.75],
+  [46.75, 0.8],
+  [50.5, 0.85],
+  [53.0, 0.9],
+]
+
+# x: release, ms to 37 % of the gain reduction left.
+[calibration.release_ms]
+x = "release_ms"
+method = "A 4 kHz sine stepped from -30 to -20 dBFS (static ratio) and from -70 to -20 dBFS and back (time to 63 % of the gain reduction on the way in, 37 % on the way out); Style Clean, knee 0, no lookahead. Attack stops rising near 53 ms at control 0.9, so its table ends there"
+points = [
+  [10.8, 0.0],
+  [12.8, 0.05],
+  [18.0, 0.1],
+  [26.8, 0.15],
+  [39.0, 0.2],
+  [54.2, 0.25],
+  [73.0, 0.3],
+  [95.2, 0.35],
+  [121.5, 0.4],
+  [152.0, 0.45],
+  [187.2, 0.5],
+  [227.8, 0.55],
+  [275.0, 0.6],
+  [330.2, 0.65],
+  [395.8, 0.7],
+  [474.5, 0.75],
+  [572.2, 0.8],
+  [698.5, 0.85],
+  [869.5, 0.9],
+  [957.2, 0.92],
+  [1060.8, 0.94],
+  [1185.0, 0.96],
+  [1338.0, 0.98],
+  [1531.0, 1.0],
+]
+

@@ -1,0 +1,29 @@
+# FabFilter Saturn: plug-in identity and parameter data for hosts (Wisdom Pro reads it).
+format = 1
+revision = 1
+
+sources = [
+  "Identity: the Audio Unit's component description and version (Info.plist)",
+  "VST3 class id: the VST3 scan",
+  "CLAP id: the CLAP plug-in factory's descriptor",
+]
+
+[plugin]
+name = "Saturn"
+vendor = "FabFilter"
+type = "saturation"
+roles = ["saturation"]
+tested_versions = ["1.29"]
+
+[formats.au]
+type = "aumf"
+subtype = "FSat"
+manufacturer = "FabF"
+
+[formats.vst3]
+class_id = "5460882AC2AA486188CCF15B4ACC25C6"
+matches_au = false
+
+[formats.clap]
+id = "com.FabFilter.preset-discovery.Saturn.1"
+

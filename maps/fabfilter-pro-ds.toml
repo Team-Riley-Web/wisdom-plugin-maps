@@ -1,0 +1,107 @@
+# FabFilter Pro-DS: plug-in identity and parameter data for hosts (Wisdom Pro reads it).
+format = 1
+revision = 1
+
+sources = [
+  "Identity: the Audio Unit's component description and version (Info.plist)",
+  "VST3 class id: the VST3 scan; parameters compared with the AU on one Mac with both installed",
+  "CLAP id: the CLAP plug-in factory's descriptor",
+]
+
+[plugin]
+name = "Pro-DS"
+vendor = "FabFilter"
+type = "de_esser"
+roles = ["deesser"]
+tested_versions = ["1.24"]
+
+[formats.au]
+type = "aumf"
+subtype = "FPSr"
+manufacturer = "FabF"
+
+[formats.vst3]
+class_id = "59E324D08EE811E1B8578101BBE59B18"
+matches_au = true
+
+[formats.clap]
+id = "com.FabFilter.preset-discovery.Pro-DS.1"
+
+[[controls]]
+role = "threshold"
+param = "Threshold"
+range = [0.0, 1.0]
+unit = "normalized"
+
+[[controls]]
+role = "range"
+param = "Range"
+range = [0.0, 24.0]
+unit = "db"
+
+[[controls]]
+role = "high_pass"
+param = "High-Pass Frequency"
+range = [0.0, 1.0]
+unit = "normalized"
+notes = "The detector's high-pass."
+
+[[controls]]
+role = "low_pass"
+param = "Low-Pass Frequency"
+range = [0.0, 1.0]
+unit = "normalized"
+notes = "The detector's low-pass."
+
+[[controls]]
+role = "mode"
+param = "Mode"
+unit = "choice"
+
+# A de-esser set up by Wisdom Pro: unity in and out, centred, the factory detector low-pass,
+# 10 ms lookahead. Stereo Link 0.5 is the factory travel: its upper half also selects mid/side-only
+# detection. The Audio Unit doesn't expose wide/split-band selection.
+[[fixed]]
+param = "Bypass"
+choice = "Not Bypassed"
+
+[[fixed]]
+param = "Side Chain Input Signal"
+choice = "Normal input"
+
+[[fixed]]
+param = "Audition Triggering"
+choice = "Off"
+
+[[fixed]]
+param = "Audition Side Chain"
+choice = "Off"
+
+[[fixed]]
+param = "Input Level"
+value = 0.0
+
+[[fixed]]
+param = "Output Level"
+value = 0.0
+
+[[fixed]]
+param = "Input Pan"
+value = 0.0
+
+[[fixed]]
+param = "Output Pan"
+value = 0.0
+
+[[fixed]]
+param = "Low-Pass Frequency"
+value = 0.8450984
+
+[[fixed]]
+param = "Lookahead"
+value = 10.0
+
+[[fixed]]
+param = "Stereo Link"
+value = 0.5
+

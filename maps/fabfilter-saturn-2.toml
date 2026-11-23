@@ -1,0 +1,31 @@
+# FabFilter Saturn 2: plug-in identity and parameter data for hosts (Wisdom Pro reads it).
+format = 1
+revision = 1
+
+sources = [
+  "Identity: the Audio Unit's component description and version (Info.plist)",
+  "VST3 class id: the VST3 scan; parameters compared with the AU on one Mac with both installed",
+  "CLAP id: the CLAP plug-in factory's descriptor",
+]
+
+[plugin]
+name = "Saturn 2"
+vendor = "FabFilter"
+type = "saturation"
+roles = ["saturation"]
+tested_versions = ["2.11"]
+
+[formats.au]
+type = "aumf"
+subtype = "FS2a"
+manufacturer = "FabF"
+
+[formats.vst3]
+# Num Active Bands (1-6) and each XLFO's Num Active Steps (1-16) are counts in the AU and menu indexes from 0 in the VST3.
+class_id = "8D067533D8A0491DBAA36C064C6ABBFB"
+matches_au = true
+offsets = [{ param = "6", offset = 1.0 }, { param = "143", offset = 1.0 }, { param = "216", offset = 1.0 }, { param = "289", offset = 1.0 }, { param = "362", offset = 1.0 }, { param = "435", offset = 1.0 }, { param = "508", offset = 1.0 }]
+
+[formats.clap]
+id = "com.FabFilter.preset-discovery.Saturn.2"
+

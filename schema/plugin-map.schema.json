@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Team-Riley-Web/wisdom-plugin-maps/schema/plugin-map.schema.json",
+  "title": "Plug-in map",
+  "description": "One third-party audio plug-in: its identity in each format, what its controls do, settings written as given, and measured calibration points. Format 1. Map files are TOML; this schema checks them after TOML is read.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["format", "revision", "plugin", "formats"],
+  "properties": {
+    "format": { "const": 1, "description": "The map format. Readers refuse other formats." },
+    "revision": { "type": "integer", "minimum": 1, "description": "Raised by one on every change to the map." },
+    "sources": { "type": "array", "items": { "type": "string", "minLength": 1 }, "description": "Where the data came from." },
+    "plugin": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "vendor", "type"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1, "description": "The product name, without the vendor." },
+        "vendor": { "type": "string", "minLength": 1 },
+        "type": {
+          "enum": ["eq", "dynamics", "de_esser", "reverb", "delay", "modulation", "saturation", "pitch", "utility", "ducking", "instrument", "other"],
+          "description": "What the plug-in does (a host's type colour)."
+        },
+        "roles": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": ["eq", "compressor", "limiter", "deesser", "smoother", "gate", "saturation", "multiband", "filter", "modulation", "reverb", "delay", "reference_analysis", "sidechain_ducking", "pitch_correction"]
+          },
+          "description": "Mixing jobs the plug-in can take."
+        },
+        "tested_versions": { "type": "array", "items": { "type": "string", "minLength": 1 }, "description": "Versions the map was checked on." },
+        "notes": { "type": "string" }
+      }
+    },
+    "formats": {
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 1,
+      "properties": {
+        "au": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "subtype", "manufacturer"],
+          "description": "The Audio Unit's component description (Info.plist AudioComponents).",
+          "properties": {
+            "type": { "$ref": "#/$defs/fourcc" },
+            "subtype": { "$ref": "#/$defs/fourcc" },
+            "manufacturer": { "$ref": "#/$defs/fourcc" }
+          }
+        },
+        "vst3": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["class_id"],
+          "properties": {
+            "class_id": { "type": "string", "pattern": "^[0-9A-F]{32}$", "description": "The audio processor's class id, upper-case hex." },
+            "matches_au": { "type": "boolean", "description": "Every AU parameter has the same id, name, range, default and choices in the VST3 (or is in offsets), compared on one computer with both installed." },
+            "offsets": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["param", "offset"],
+                "properties": { "param": { "type": "string", "minLength": 1 }, "offset": { "type": "number" } }
+              },
+              "description": "Parameters (by id) whose AU value is the VST3 value plus offset."
+            }
+          }
+        },
+        "clap": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["id"],
+          "properties": { "id": { "type": "string", "pattern": "^\\S+$", "description": "The CLAP plug-in descriptor's id." } }
+        }
+      }
+    },
+    "controls": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["role", "param"],
+        "properties": {
+          "role": { "type": "string", "pattern": "^[a-z0-9_]+$", "description": "What the control is for; unique in the map." },
+          "param": { "type": "string", "minLength": 1, "description": "The parameter's name as the plug-in reports it (the AU's; the same in VST3/CLAP unless overridden)." },
+          "vst3_param": { "type": "string", "minLength": 1 },
+          "clap_param": { "type": "string", "minLength": 1 },
+          "range": { "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 2, "description": "The native [min, max]." },
+          "unit": { "enum": ["normalized", "db", "dbfs", "hz", "log2_hz", "ms", "s", "percent", "ratio", "semitones", "cents", "choice", "toggle", "native"] },
+          "taper": { "enum": ["linear", "log", "exp", "stepped"] },
+          "default": { "type": "number" },
+          "full_scale": { "type": "number", "description": "The native value that means 100 %." },
+          "calibration": { "type": "string", "minLength": 1, "description": "The calibration table (by name) for this control." },
+          "choices": { "type": "array", "items": { "type": "string" }, "description": "A choice control's labels, in native order." },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "fixed": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["param"],
+        "oneOf": [{ "required": ["value"] }, { "required": ["choice"] }],
+        "properties": {
+          "param": { "type": "string", "minLength": 1 },
+          "value": { "type": "number" },
+          "choice": { "type": "string", "minLength": 1 },
+          "notes": { "type": "string" }
+        }
+      },
+      "description": "Settings written exactly as given whenever a host sets the plug-in up this way."
+    },
+    "calibration": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["x", "points"],
+        "properties": {
+          "x": { "type": "string", "minLength": 1, "description": "What the first number of each point is (decay_s, ratio, key_dbfs)." },
+          "method": { "type": "string" },
+          "points": {
+            "type": "array",
+            "minItems": 2,
+            "items": { "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 2 },
+            "description": "[x, native value] pairs, x strictly rising; read piecewise-linear, held at the ends."
+          }
+        }
+      }
+    },
+    "measurements": { "type": "object", "additionalProperties": { "type": "number" }, "description": "Single measured numbers." }
+  },
+  "$defs": {
+    "fourcc": { "type": "string", "pattern": "^[\\x20-\\x7E]{4}$", "description": "A four-character code." }
+  }
+}

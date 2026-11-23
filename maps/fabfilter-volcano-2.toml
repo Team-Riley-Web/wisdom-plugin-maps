@@ -1,0 +1,29 @@
+# FabFilter Volcano 2: plug-in identity and parameter data for hosts (Wisdom Pro reads it).
+format = 1
+revision = 1
+
+sources = [
+  "Identity: the Audio Unit's component description and version (Info.plist)",
+  "VST3 class id: the VST3 scan",
+  "CLAP id: the CLAP plug-in factory's descriptor",
+]
+
+[plugin]
+name = "Volcano 2"
+vendor = "FabFilter"
+type = "eq"
+roles = ["filter"]
+tested_versions = ["2.39"]
+
+[formats.au]
+type = "aumf"
+subtype = "FV2l"
+manufacturer = "FabF"
+
+[formats.vst3]
+class_id = "5D923348ADF743B59F86EC29572B103E"
+matches_au = false
+
+[formats.clap]
+id = "com.FabFilter.preset-discovery.Volcano.2"
+

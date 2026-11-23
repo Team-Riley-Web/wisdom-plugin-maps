@@ -1,0 +1,76 @@
+# FabFilter Pro-Q 4: plug-in identity and parameter data for hosts (Wisdom Pro reads it).
+format = 1
+revision = 1
+
+sources = [
+  "Identity: the Audio Unit's component description and version (Info.plist)",
+  "VST3 class id: the VST3 scan",
+  "CLAP id: the CLAP plug-in factory's descriptor",
+  "Calibration: measured by Wisdom Pro on the installed plug-in by rendering test signals",
+]
+
+[plugin]
+name = "Pro-Q 4"
+vendor = "FabFilter"
+type = "eq"
+roles = ["eq"]
+tested_versions = ["4.02"]
+
+[formats.au]
+type = "aumf"
+subtype = "FQ4p"
+manufacturer = "FabF"
+
+[formats.vst3]
+class_id = "ED57BD725C60467EA64DD2F400758B6F"
+matches_au = false
+
+[formats.clap]
+id = "com.FabFilter.Pro-Q.4"
+
+[[controls]]
+role = "band_threshold"
+param = "Band 1 Threshold"
+calibration = "key_threshold"
+notes = "Every band n has its own `Band n Threshold` (bands 1-24) with the same travel."
+
+[[controls]]
+role = "band_release"
+param = "Band 1 Release"
+calibration = "key_release_tau_ms"
+notes = "Every band n has its own `Band n Release` (bands 1-24) with the same travel."
+
+# A dynamic bell keyed from an external side chain (External Side Chain on, Side Chain Filtering
+# Band): x is the key level (a steady tone in the band) at which the band reaches half its Range.
+# The dip starts about 8 dB under that level and is 90 % of the Range 4-6 dB over it. Under 0.14
+# the band already dips on very quiet keys; over 0.8 it no longer reaches its full Range at 0 dBFS.
+[calibration.key_threshold]
+x = "key_dbfs"
+method = "External key, a steady tone in the band; the level at which the band reaches half its Range"
+points = [
+  [-56.0, 0.14],
+  [-50.0, 0.16],
+  [-46.0, 0.18],
+  [-40.0, 0.2],
+  [-34.0, 0.3],
+  [-28.0, 0.4],
+  [-22.0, 0.5],
+  [-16.0, 0.6],
+  [-12.0, 0.6666667],
+  [-10.0, 0.7],
+  [-4.0, 0.8],
+]
+
+# x: the release as a time constant in dB (ms to recover 63 % of the dip), with an external key.
+[calibration.key_release_tau_ms]
+x = "release_tau_ms"
+method = "External key; time to recover 63 % of the dip (in dB) after the key stops"
+points = [
+  [111.0, 0.0],
+  [113.0, 10.0],
+  [148.0, 25.0],
+  [244.0, 50.0],
+  [375.0, 75.0],
+  [629.0, 100.0],
+]
+

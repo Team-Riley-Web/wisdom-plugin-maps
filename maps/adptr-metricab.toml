@@ -1,0 +1,25 @@
+# ADPTR Audio MetricAB: plug-in identity and parameter data for hosts (Wisdom Pro reads it).
+format = 1
+revision = 1
+
+sources = [
+  "Identity: the Audio Unit's component description and version (Info.plist)",
+  "VST3 class id: the VST3 scan; parameters compared with the AU on one Mac with both installed",
+]
+
+[plugin]
+name = "MetricAB"
+vendor = "ADPTR Audio"
+type = "utility"
+roles = ["reference_analysis"]
+tested_versions = ["1.4.1"]
+
+[formats.au]
+type = "aufx"
+subtype = "Kfbw"
+manufacturer = "Adpt"
+
+[formats.vst3]
+class_id = "5653544B6662776164707472206D6574"
+matches_au = true
+

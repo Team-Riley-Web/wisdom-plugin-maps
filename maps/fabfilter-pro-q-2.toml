@@ -1,0 +1,29 @@
+# FabFilter Pro-Q 2: plug-in identity and parameter data for hosts (Wisdom Pro reads it).
+format = 1
+revision = 1
+
+sources = [
+  "Identity: the Audio Unit's component description and version (Info.plist)",
+  "VST3 class id: the VST3 scan",
+  "CLAP id: the CLAP plug-in factory's descriptor",
+]
+
+[plugin]
+name = "Pro-Q 2"
+vendor = "FabFilter"
+type = "eq"
+roles = ["eq"]
+tested_versions = ["2.28"]
+
+[formats.au]
+type = "aumf"
+subtype = "FQ2p"
+manufacturer = "FabF"
+
+[formats.vst3]
+class_id = "55FD08E6C00B44A697DA68F61C6FD576"
+matches_au = false
+
+[formats.clap]
+id = "com.FabFilter.preset-discovery.Pro-Q.2"
+

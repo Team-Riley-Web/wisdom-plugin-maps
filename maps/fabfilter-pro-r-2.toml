@@ -1,0 +1,81 @@
+# FabFilter Pro-R 2: plug-in identity and parameter data for hosts (Wisdom Pro reads it).
+format = 1
+revision = 1
+
+sources = [
+  "Identity: the Audio Unit's component description and version (Info.plist)",
+  "VST3 class id: the VST3 scan",
+  "CLAP id: the CLAP plug-in factory's descriptor",
+  "Calibration: measured by Wisdom Pro on the installed plug-in by rendering test signals",
+]
+
+[plugin]
+name = "Pro-R 2"
+vendor = "FabFilter"
+type = "reverb"
+roles = ["reverb"]
+tested_versions = ["2.04"]
+
+[formats.au]
+type = "aumf"
+subtype = "FR2p"
+manufacturer = "FabF"
+
+[formats.vst3]
+class_id = "6070873C802A4B078FC06AB5459154E9"
+matches_au = false
+
+[formats.clap]
+id = "com.FabFilter.preset-discovery.Pro-R.2"
+
+[[controls]]
+role = "wet"
+param = "Mix"
+full_scale = 100.0
+notes = "Equal-power mix: the direct path is cos(mix x pi/2). Space left at 0.5 while measuring."
+
+[[controls]]
+role = "decay"
+param = "Decay Rate"
+calibration = "decay_s"
+
+[[controls]]
+role = "predelay"
+param = "Predelay"
+calibration = "predelay_ms"
+
+# x: decay in seconds, as the plug-in's own tail rendered at 20 % mix, read by Wisdom Pro's space estimate (not an RT60).
+[calibration.decay_s]
+x = "decay_s"
+method = "the plug-in's own tail rendered at 20 % mix, read by Wisdom Pro's space estimate (not an RT60)"
+points = [
+  [0.58, -1.0],
+  [0.74, -0.75],
+  [1.16, -0.5],
+  [1.68, -0.25],
+  [2.37, 0.0],
+  [3.27, 0.25],
+  [4.63, 0.5],
+  [6.279, 0.75],
+  [8.63, 1.0],
+]
+
+# x: pre-delay in ms on top of the first return at pre-delay 0.
+[calibration.predelay_ms]
+x = "predelay_ms"
+method = "time of the first sample 60 dB under the peak, less the first return at pre-delay 0"
+points = [
+  [0.0, 0.0],
+  [0.5, 0.05],
+  [1.0, 0.1],
+  [5.0, 0.2],
+  [15.0, 0.3],
+  [50.0, 0.5],
+  [190.0, 0.75],
+  [500.0, 1.0],
+]
+
+[measurements]
+# The first return at pre-delay 0, ms (the first sample 60 dB under the peak).
+first_return_ms = 6.7
+

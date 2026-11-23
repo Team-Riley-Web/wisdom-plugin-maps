@@ -1,0 +1,29 @@
+# FabFilter Micro: plug-in identity and parameter data for hosts (Wisdom Pro reads it).
+format = 1
+revision = 1
+
+sources = [
+  "Identity: the Audio Unit's component description and version (Info.plist)",
+  "VST3 class id: the VST3 scan",
+  "CLAP id: the CLAP plug-in factory's descriptor",
+]
+
+[plugin]
+name = "Micro"
+vendor = "FabFilter"
+type = "eq"
+roles = ["filter"]
+tested_versions = ["1.30"]
+
+[formats.au]
+type = "aumf"
+subtype = "FMic"
+manufacturer = "FabF"
+
+[formats.vst3]
+class_id = "751AFC3415434CBCAA73672A109BE0FF"
+matches_au = false
+
+[formats.clap]
+id = "com.FabFilter.preset-discovery.Micro.1"
+

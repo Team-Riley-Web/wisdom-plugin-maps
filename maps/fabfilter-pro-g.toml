@@ -1,0 +1,29 @@
+# FabFilter Pro-G: plug-in identity and parameter data for hosts (Wisdom Pro reads it).
+format = 1
+revision = 1
+
+sources = [
+  "Identity: the Audio Unit's component description and version (Info.plist)",
+  "VST3 class id: the VST3 scan",
+  "CLAP id: the CLAP plug-in factory's descriptor",
+]
+
+[plugin]
+name = "Pro-G"
+vendor = "FabFilter"
+type = "dynamics"
+roles = ["gate"]
+tested_versions = ["1.34"]
+
+[formats.au]
+type = "aumf"
+subtype = "FPGr"
+manufacturer = "FabF"
+
+[formats.vst3]
+class_id = "9D1DCCF7918A436FA3CDD7115D8B193B"
+matches_au = false
+
+[formats.clap]
+id = "com.FabFilter.preset-discovery.Pro-G.1"
+

@@ -1,0 +1,133 @@
+# TBTECH Cenozoix Compressor: plug-in identity and parameter data for hosts (Wisdom Pro reads it).
+format = 1
+revision = 1
+
+sources = [
+  "Identity: the Audio Unit's component description and version (Info.plist)",
+  "VST3 class id: the VST3 scan; parameters compared with the AU on one Mac with both installed",
+  "Calibration: measured by Wisdom Pro on the installed plug-in by rendering test signals",
+]
+
+[plugin]
+name = "Cenozoix Compressor"
+vendor = "TBTECH"
+type = "dynamics"
+roles = ["compressor"]
+tested_versions = ["1.1.1"]
+
+[formats.au]
+type = "aufx"
+subtype = "0a6i"
+manufacturer = "Tbtc"
+
+[formats.vst3]
+class_id = "56535430613669746274656368206365"
+matches_au = true
+
+[[controls]]
+role = "ratio"
+param = "Ratio"
+calibration = "ratio"
+
+[[controls]]
+role = "attack"
+param = "Att Time"
+calibration = "attack_ms"
+
+[[controls]]
+role = "release"
+param = "Rel Time"
+calibration = "release_ms"
+
+# x: the static ratio (x:1) the control gives.
+[calibration.ratio]
+x = "ratio"
+method = "A 4 kHz sine stepped from -30 to -20 dBFS (static ratio) and from -70 to -20 dBFS and back (time to 63 % of the gain reduction on the way in, 37 % on the way out); Style Clean, Range 1, Knee 0"
+points = [
+  [1.0, 0.0],
+  [1.07, 0.05],
+  [1.14, 0.1],
+  [1.20, 0.15],
+  [1.29, 0.2],
+  [1.39, 0.25],
+  [1.52, 0.3],
+  [1.75, 0.35],
+  [1.99, 0.4],
+  [2.29, 0.45],
+  [2.57, 0.5],
+  [3.03, 0.55],
+  [3.46, 0.6],
+  [4.10, 0.65],
+  [4.76, 0.7],
+  [5.31, 0.75],
+  [5.82, 0.8],
+  [6.29, 0.85],
+  [6.73, 0.9],
+  [6.90, 0.92],
+  [10.93, 0.94],
+  [14.24, 0.96],
+  [15.70, 0.98],
+  [16.53, 1.0],
+]
+
+# x: attack, ms to 63 % of the gain reduction.
+[calibration.attack_ms]
+x = "attack_ms"
+method = "A 4 kHz sine stepped from -30 to -20 dBFS (static ratio) and from -70 to -20 dBFS and back (time to 63 % of the gain reduction on the way in, 37 % on the way out); Style Clean, Range 1, Knee 0"
+points = [
+  [0.25, 0.05],
+  [0.75, 0.1],
+  [1.25, 0.15],
+  [2.0, 0.2],
+  [3.5, 0.25],
+  [5.25, 0.3],
+  [7.75, 0.35],
+  [10.5, 0.4],
+  [14.25, 0.45],
+  [18.0, 0.5],
+  [23.5, 0.55],
+  [28.5, 0.6],
+  [35.25, 0.65],
+  [42.5, 0.7],
+  [50.0, 0.75],
+  [57.75, 0.8],
+  [67.5, 0.85],
+  [78.75, 0.9],
+  [83.25, 0.92],
+  [89.25, 0.94],
+  [96.75, 0.96],
+  [104.0, 0.98],
+  [111.5, 1.0],
+]
+
+# x: release, ms to 37 % of the gain reduction left.
+[calibration.release_ms]
+x = "release_ms"
+method = "A 4 kHz sine stepped from -30 to -20 dBFS (static ratio) and from -70 to -20 dBFS and back (time to 63 % of the gain reduction on the way in, 37 % on the way out); Style Clean, Range 1, Knee 0"
+points = [
+  [8.0, 0.0],
+  [12.2, 0.05],
+  [18.0, 0.1],
+  [24.5, 0.15],
+  [32.5, 0.2],
+  [42.2, 0.25],
+  [53.2, 0.3],
+  [69.8, 0.35],
+  [88.2, 0.4],
+  [111.2, 0.45],
+  [134.8, 0.5],
+  [166.0, 0.55],
+  [197.5, 0.6],
+  [242.0, 0.65],
+  [290.2, 0.7],
+  [347.0, 0.75],
+  [406.0, 0.8],
+  [495.2, 0.85],
+  [604.5, 0.9],
+  [648.2, 0.92],
+  [742.2, 0.94],
+  [886.5, 0.96],
+  [1030.8, 0.98],
+  [1175.2, 1.0],
+]
+
