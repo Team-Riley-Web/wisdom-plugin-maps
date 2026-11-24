@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/Team-Riley-Web/wisdom-plugin-maps/schema/catalog-entry.schema.json",
   "title": "Free plug-in catalog entry",
-  "description": "One curated free, open-licence plug-in a host can offer to install: where the author publishes each platform's build, pinned by size and SHA-256, and how it installs. Format 1. Entries are TOML in catalog/; this schema checks them after TOML is read. Nothing is re-hosted: every URL is the author's own release or official site.",
+  "description": "Free plug-ins from official authors: pinned downloads or user-mediated author pages. No binaries are re-hosted.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -81,12 +81,12 @@
     "license": {
       "type": "string",
       "minLength": 1,
-      "description": "The SPDX id of the licence in the author's repository."
+      "description": "SPDX identifier for open source; author EULA label for freeware."
     },
     "source": {
       "type": "string",
       "pattern": "^https://",
-      "description": "The author's source repository."
+      "description": "Official source repository or product page."
     },
     "site": {
       "type": "string",
@@ -146,7 +146,7 @@
     },
     "downloads": {
       "type": "array",
-      "minItems": 1,
+      "minItems": 0,
       "items": {
         "type": "object",
         "additionalProperties": false,
@@ -237,6 +237,67 @@
           }
         }
       }
+    },
+    "license_kind": {
+      "enum": [
+        "open_source",
+        "freeware"
+      ],
+      "default": "open_source"
+    },
+    "pages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "platform",
+          "version",
+          "url",
+          "requirements"
+        ],
+        "properties": {
+          "platform": {
+            "enum": [
+              "macos-universal",
+              "macos-arm64",
+              "macos-x86_64",
+              "windows-x86_64"
+            ]
+          },
+          "version": {
+            "type": "string",
+            "minLength": 1
+          },
+          "url": {
+            "type": "string",
+            "pattern": "^https://"
+          },
+          "requirements": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
     }
-  }
+  },
+  "anyOf": [
+    {
+      "properties": {
+        "downloads": {
+          "minItems": 1
+        }
+      }
+    },
+    {
+      "required": [
+        "pages"
+      ],
+      "properties": {
+        "pages": {
+          "minItems": 1
+        }
+      }
+    }
+  ]
 }

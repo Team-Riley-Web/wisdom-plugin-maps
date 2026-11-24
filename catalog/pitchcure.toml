@@ -1,0 +1,27 @@
+format = 1
+id = "pitchcure"
+name = "PitchCure"
+author = "Saint Mike DSP"
+category = "pitch"
+license = "Freeware (author EULA)"
+license_kind = "freeware"
+source = "https://saintmikedsp.com/plugins/pitchcure"
+site = "https://saintmikedsp.com/plugins/pitchcure"
+summary = "Real-time vocal tuning with key detection and vibrato protection."
+formats = ["au", "vst3"]
+stars = 0
+selected = "2026-11-24"
+downloads = []
+plugin_ids = ["au:aumf:PtCu:SMik"]
+
+[[pages]]
+platform = "macos-universal"
+version = "1.1.0"
+url = "https://saintmikedsp.com/plugins/pitchcure"
+requirements = "Email sign-up; download link delivered by email."
+
+[[pages]]
+platform = "windows-x86_64"
+version = "1.1.0"
+url = "https://saintmikedsp.com/plugins/pitchcure"
+requirements = "Email sign-up; download link delivered by email."

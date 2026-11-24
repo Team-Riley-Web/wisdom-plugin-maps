@@ -85,11 +85,12 @@ Any other host can read the same files: the format is plain TOML and the schema 
 
 ## Free plug-in catalog
 
-[`catalog/`](catalog) is a short, curated list of free, open-licence plug-ins (the top few per
-category by GitHub stars, under the rules in [CURATION.md](CURATION.md)) that a host can offer to
-install in one click. Each entry pins the author's own download for macOS and Windows by size and
+[`catalog/`](catalog) is a short, curated list of free, open-source or freeware plug-ins (the top few per
+category, with open-source choices ranked by GitHub stars under the rules in [CURATION.md](CURATION.md)) that a host can offer to
+install or obtain from its author. Direct downloads for macOS and Windows are pinned by size and
 SHA-256 and says how it installs: plug-in bundles copied into the per-user plug-in folders, or the
-author's installer opened for the user. Nothing is re-hosted here. Entries are checked against
+author's installer opened for the user. Email/account/checkout entries instead open the official
+product page and show its requirements; the host does not download them. Nothing is re-hosted here. Entries are checked against
 [`schema/catalog-entry.schema.json`](schema/catalog-entry.schema.json) by the same validator.
 
 ## Contributing

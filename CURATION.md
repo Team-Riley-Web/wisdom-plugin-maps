@@ -1,25 +1,24 @@
 # Curation of the free plug-in catalog
 
-`catalog/` lists a small, curated set of free, open-licence plug-ins a host can offer to install
-with one click. It is deliberately not "every free plug-in": a few good ones per category.
+`catalog/` lists a small, curated set of free plug-ins a host can offer to install or obtain from their authors. It is deliberately not "every free plug-in": a few good ones per category.
 
 ## Selection rules
 
-A plug-in is listed when all of these hold, and then ranked by the GitHub stars of its source
-repository:
+A plug-in is listed when all of these hold, with open-source entries ranked by source repository stars (freeware has no star ranking):
 
-1. **Open licence** that lets anyone download the author's builds (its SPDX id is recorded).
+1. **Free to keep, not a trial.** Open-source licenses are recorded by SPDX id; freeware is clearly labeled as governed by the author's EULA.
 2. **Maintained**: a release within about the last 18 months.
 3. **Official builds for macOS and Windows x64** (VST3, AU and/or CLAP), published by the author:
    macOS universal or arm64 + x86_64.
 4. **A working download from the author's own release** (GitHub release, or the author's official
-   site). Nothing is ever re-hosted here: an entry pins the author's URL with its size and
-   SHA-256, and a host refuses a download that doesn't match.
+   site). Nothing is ever re-hosted here: a direct download pins the author's URL with size and
+   SHA-256, and a host refuses a mismatch. Email, account or checkout downloads instead
+   list a per-platform author page and requirements; the host opens that page without downloading.
 5. **At most 5-10 per category** (instruments: synths, samplers, drums). A thin category is left
-   thin rather than padded with stale or closed plug-ins.
+   thin rather than padded with stale plug-ins.
 
-Freeware without an open licence (closed binaries, account-gated downloads) is not listed, and
-neither is anything that only exists as a re-upload, or star-farmed "cracked suite" repositories.
+Freeware is listed only from its official author page, with its terms and sign-up requirements
+shown honestly. Never list anything that only exists as a re-upload, or star-farmed "cracked suite" repositories.
 
 macOS signing is checked at selection and recorded per build (`signed`: `notarized`,
 `developer-id`, `unsigned` for ad-hoc signed official builds, which hosts load). Windows builds are
@@ -83,7 +82,15 @@ None qualifies yet. Airwindows Consolidated (De-esser) covers it.
 
 ### Pitch
 
-None qualifies yet. (No open-source pitch corrector has current macOS and Windows builds; NeuralNote, audio to MIDI, is under Utility.)
+Added 2026-11-24 by owner request:
+
+| Plug-in | License | Version | Mac / Windows | Delivery |
+|---|---|---|---|---|
+| [PitchCure](https://saintmikedsp.com/plugins/pitchcure) — Saint Mike DSP | Freeware (author EULA) | 1.1.0 | AU + VST3 / VST3 | Author page; email sign-up |
+| [PitchNet](https://sessionloops.com/pitchnet) — Session Loops | AGPL-3.0-only | 0.8.1 | AU + VST3 / VST3 | Pinned official pkg / exe; no account |
+| [THE_PITCH 2 MINI](https://www.philspeiser.com/product/the_pitch-2-mini) — Phil Speiser | Freeware (author EULA) | 1.0.0 | AU + VST3 / VST3 | Author page; account + $0 checkout |
+
+All three also offer AAX (outside this host catalog); none advertises CLAP. No binary or source from these projects ships here. PitchNet is also available on Linux outside the host catalog platforms. PitchCure is free without a time limit per the author FAQ; MINI is explicitly not a trial or subscription in the author's November 21 comparison article. See the official pages, [Saint Mike terms](https://saintmikedsp.com/legal/terms-of-service), [MINI manual](https://www.philspeiser.com/manual/the_pitch-2-mini), [Phil Speiser terms](https://www.philspeiser.com/imprint), and [PitchNet license](https://github.com/SessionLoops/PitchNet/blob/master/LICENSE).
 
 
 ### Utility / Meters

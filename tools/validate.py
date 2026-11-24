@@ -68,7 +68,9 @@ def catalog_rules(path, e):
     p = []
     if e["id"] != path.stem:
         p.append(f"id {e['id']!r} must be the file name {path.stem!r}")
-    plats = [d["platform"] for d in e["downloads"]]
+    plats = [d["platform"] for d in e["downloads"] + e.get("pages", [])]
+    if not plats:
+        p.append("downloads or author pages are required")
     if len(plats) != len(set(plats)):
         p.append("a platform is listed twice")
     if not any(x.startswith("macos") for x in plats) or "windows-x86_64" not in plats:

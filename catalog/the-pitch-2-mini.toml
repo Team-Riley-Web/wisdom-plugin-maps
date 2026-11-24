@@ -1,0 +1,26 @@
+format = 1
+id = "the-pitch-2-mini"
+name = "THE_PITCH 2 MINI"
+author = "Phil Speiser"
+category = "pitch"
+license = "Freeware (author EULA)"
+license_kind = "freeware"
+source = "https://www.philspeiser.com/product/the_pitch-2-mini"
+site = "https://www.philspeiser.com/product/the_pitch-2-mini"
+summary = "Vocal pitch correction from hard tuning to natural correction."
+formats = ["au", "vst3"]
+stars = 0
+selected = "2026-11-24"
+downloads = []
+
+[[pages]]
+platform = "macos-universal"
+version = "1.0.0"
+url = "https://www.philspeiser.com/product/the_pitch-2-mini"
+requirements = "Account and $0 checkout; sign in once in the plug-in."
+
+[[pages]]
+platform = "windows-x86_64"
+version = "1.0.0"
+url = "https://www.philspeiser.com/product/the_pitch-2-mini"
+requirements = "Account and $0 checkout; sign in once in the plug-in."

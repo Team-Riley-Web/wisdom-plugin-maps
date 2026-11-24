@@ -65,6 +65,8 @@ def refresh(path):
     text = path.read_text(encoding="utf-8")
     e = tomllib.loads(text)
     notes = []
+    if not e["source"].startswith("https://github.com/"):
+        return ["author-page entry: review version and download requirements by hand"]
     repo = e["source"].removeprefix("https://github.com/")
     try:
         stars = gh(f"repos/{repo}")["stargazers_count"]
