@@ -97,3 +97,6 @@ product page and show its requirements; the host does not download them. Nothing
 
 New maps and corrections are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md): one map per file,
 checked with `python3 tools/validate.py`, every commit signed off (DCO).
+
+Catalog update 2026-11-25: the owner withdrew all pitch plug-in recommendations.
+The Pitch enum and freeware/author-page schema remain compatible with older catalogs.

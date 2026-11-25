@@ -82,16 +82,9 @@ None qualifies yet. Airwindows Consolidated (De-esser) covers it.
 
 ### Pitch
 
-Added 2026-11-24 by owner request:
-
-| Plug-in | License | Version | Mac / Windows | Delivery |
-|---|---|---|---|---|
-| [PitchCure](https://saintmikedsp.com/plugins/pitchcure) — Saint Mike DSP | Freeware (author EULA) | 1.1.0 | AU + VST3 / VST3 | Author page; email sign-up |
-| [PitchNet](https://sessionloops.com/pitchnet) — Session Loops | AGPL-3.0-only | 0.8.1 | AU + VST3 / VST3 | Pinned official pkg / exe; no account |
-| [THE_PITCH 2 MINI](https://www.philspeiser.com/product/the_pitch-2-mini) — Phil Speiser | Freeware (author EULA) | 1.0.0 | AU + VST3 / VST3 | Author page; account + $0 checkout |
-
-All three also offer AAX (outside this host catalog); none advertises CLAP. No binary or source from these projects ships here. PitchNet is also available on Linux outside the host catalog platforms. PitchCure is free without a time limit per the author FAQ; MINI is explicitly not a trial or subscription in the author's November 21 comparison article. See the official pages, [Saint Mike terms](https://saintmikedsp.com/legal/terms-of-service), [MINI manual](https://www.philspeiser.com/manual/the_pitch-2-mini), [Phil Speiser terms](https://www.philspeiser.com/imprint), and [PitchNet license](https://github.com/SessionLoops/PitchNet/blob/master/LICENSE).
-
+Owner decision, 2026-11-25: all pitch plug-ins (PitchCure, THE_PITCH 2 MINI and PitchNet)
+were removed from the catalog. The category schema remains readable for older bundles.
+The freeware/author-page delivery code remains supported but is currently unused.
 
 ### Utility / Meters
 
